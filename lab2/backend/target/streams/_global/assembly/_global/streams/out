@@ -5,20 +5,20 @@
 [0m[[0m[0mdebug[0m] [0m[0mCollect excluded jar names start:[0m
 [0m[[0m[0mdebug[0m] [0m[0mCollect excluded jar names end. Took 0 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mFilter jars start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mFilter jars end. Took 1 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mFilter jars end. Took 0 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mCollect and shade project classes start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mCollect and shade project classes end. Took 1 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect and shade project classes end. Took 2 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mCollect and shade dependency entries start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mCollect and shade dependency entries end. Took 7 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect and shade dependency entries end. Took 10 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mCollect renames start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mCollect renames end. Took 33 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect renames end. Took 82 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mProcess renames start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mProcess renames end. Took 12 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mProcess renames end. Took 22 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mCollect all merge strategies for cache check start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mCollect all merge strategies for cache check end. Took 45 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect all merge strategies for cache check end. Took 48 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mBuilding assembly jar due to changed inputs...[0m
 [0m[[0m[0mdebug[0m] [0m[0mMerge all conflicting jar entries (including those renamed) start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mMerge all conflicting jar entries (including those renamed) end. Took 22 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge all conflicting jar entries (including those renamed) end. Took 40 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mReport merge results start:[0m
 [0m[[0m[0minfo[0m] [0m[0m7 file(s) merged using strategy 'Concat' (Run the task at debug level to see the details)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
@@ -68,15 +68,15 @@
 [0m[[0m[0mdebug[0m] [0m[0m  None[0m
 [0m[[0m[0mdebug[0m] [0m[0mMerge origins:[0m
 [0m[[0m[0mdebug[0m] [0m[0m  Jar name = slf4j-api-1.7.36.jar, jar org = org.slf4j, entry target = META-INF/maven/org.slf4j/slf4j-api/pom.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mReport merge results end. Took 8 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mReport merge results end. Took 12 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mFinding remaining conflicts that were not merged start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mFinding remaining conflicts that were not merged end. Took 28 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinding remaining conflicts that were not merged end. Took 76 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mSort/Parallelize merged entries start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mSort/Parallelize merged entries end. Took 18 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mSort/Parallelize merged entries end. Took 30 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate jar start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mCreate jar end. Took 1553 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate jar end. Took 1685 ms[0m
 [0m[[0m[0mdebug[0m] [0m[0mHash newly-built Jar start:[0m
-[0m[[0m[0mdebug[0m] [0m[0mHash newly-built Jar end. Took 25 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mHash newly-built Jar end. Took 35 ms[0m
 [0m[[0m[0minfo[0m] [0m[0mBuilt: /home/naswek/scala_projects/lab2/backend/target/scala-2.13/Lab1-assembly-0.1.0.jar[0m
 [0m[[0m[0minfo[0m] [0m[0mJar hash: 0d8df308d70a7ed855d9b17598fcc37f53b17540[0m
 [0m[[0m[0mdebug[0m] [0m[0mClose library jar references start:[0m

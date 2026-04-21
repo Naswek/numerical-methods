@@ -5,10 +5,10 @@ import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import spray.json._
 import DefaultJsonProtocol._
-import solver.library.Library
-import solver.library.samples.Samples
+import solver.nonlinear.Library
+import solver.nonlinear.samples.Samples
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
-import models._
+import solver.nonlinear.models._
 
 
 object NonLinearRoutes {
