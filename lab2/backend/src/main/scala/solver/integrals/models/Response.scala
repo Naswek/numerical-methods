@@ -1,26 +1,15 @@
 package solver.integrals.models
 
+import solver.core.Message
 
-
-case class FunctionResponse(
-    x: Double, 
-    fx: Double, 
-    iterations: Int
-)
-
-case class SystemResponse(
-    x: Array[Double], 
-    fx: Array[Double], 
-    iterations: Int
+case class IntegralResponse(
+    success: Boolean,
+    value: Double, 
+    n: Int, 
+    message: String
 )
 
 case class SamplesResponse(
-  functions: List[String],
-  systems: List[SystemSample],
-  methods: MethodsResponse
-)
-
-case class MethodsResponse(
-  function: List[String],
-  system: List[String]
+  integrals: List[String],
+  methods: List[String]
 )

@@ -29,4 +29,10 @@ object Samples {
     "∫_{1}^{2} (2x^3 - 4x^2 + 6x - 25) dx",
     "∫_{1}^{4} (3x^3 - 2x^2 + 7x + 26) dx"
   )
+  
+  val integralsMethods = List(
+    "Rectangle Method", 
+    "Simpson Method",
+    "Trapezoid Method"
+  )
 }

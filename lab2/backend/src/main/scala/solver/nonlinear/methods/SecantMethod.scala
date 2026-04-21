@@ -1,6 +1,7 @@
 package solver.nonlinear.methods
 
 import solver.nonlinear.functions.{FunctionPack, Method1D, FunctionResult}
+import solver.core.Message
 
 class SecantMethod extends Method1D {
   override def solve(functionPack: FunctionPack, a: Double, b: Double, epsilon: Double): FunctionResult = {
@@ -18,7 +19,7 @@ class SecantMethod extends Method1D {
     while ((math.abs(fCurr)) > epsilon && iterations < 1000) {
 
         if (math.abs(fCurr - fPrev) < 1e-12) {
-            return new FunctionResult(xCurr, fCurr, iterations, Some("Предупреждение: знаменатель близок к нулю"))
+            return new FunctionResult(xCurr, fCurr, iterations, Message.DivisionByZero)
         }
 
 
@@ -31,6 +32,6 @@ class SecantMethod extends Method1D {
 
         iterations += 1
     }
-    new FunctionResult(xCurr, fCurr, iterations, if (iterations >= 1000) Some("Превышено максимальное количество итераций") else None)
+    new FunctionResult(xCurr, fCurr, iterations, if (iterations >= 1000) Message.IterationLimitExceeded else Message.Success)
   }
 }

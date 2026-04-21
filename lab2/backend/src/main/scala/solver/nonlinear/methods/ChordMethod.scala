@@ -1,6 +1,7 @@
 package solver.nonlinear.methods
 
 import solver.nonlinear.functions.{FunctionPack, Method1D, FunctionResult}
+import solver.core.Message
 
 class ChordMethod extends Method1D {
   override def solve(functionPack: FunctionPack, a: Double, b: Double, epsilon: Double): FunctionResult = {
@@ -8,7 +9,7 @@ class ChordMethod extends Method1D {
     val fb = functionPack.f(b)
 
     if (fa * fb > 0) {
-      return new FunctionResult(0, 0, 0, Some("В данном промежутке нет корня."))
+      return new FunctionResult(0, 0, 0, Message.NoRootInInterval)
     }
 
     val f2a = functionPack.d2f(a)
@@ -28,6 +29,6 @@ class ChordMethod extends Method1D {
         fx = functionPack.f(x)
         iterations += 1
     }
-    new FunctionResult(x, fx, iterations, if (iterations >= 1000) Some("Превышено максимальное количество итераций") else None)
+    new FunctionResult(x, fx, iterations, if (iterations >= 1000) Message.IterationLimitExceeded else Message.Success)
   }
 }

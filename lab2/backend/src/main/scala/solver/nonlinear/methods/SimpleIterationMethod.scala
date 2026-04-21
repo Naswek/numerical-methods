@@ -1,6 +1,7 @@
 package solver.nonlinear.methods
 
 import solver.nonlinear.functions.{FunctionPack, Method1D, FunctionResult}
+import solver.core.Message
 
 class SimpleIterationMethod extends Method1D {
   override def solve(pack: FunctionPack, a: Double, b: Double, eps: Double): FunctionResult = {
@@ -23,10 +24,10 @@ class SimpleIterationMethod extends Method1D {
       iterations += 1
       
       if (x.isInfinite || x.isNaN) {
-         return new FunctionResult(xPrev, pack.f(xPrev), iterations, Some("Метод расходится. Условие сходимости не выполнено.")) //enum
+         return new FunctionResult(xPrev, pack.f(xPrev), iterations, Message.MethodDoesNotConverge) 
       }
     }
     
-    new FunctionResult(x, fx, iterations, if (iterations >= 1000) Some("Превышено максимальное количество итераций") else None)
+    new FunctionResult(x, fx, iterations, if (iterations >= 1000) Message.IterationLimitExceeded else Message.Success)
   }
 }

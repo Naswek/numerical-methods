@@ -1,258 +1,37 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/Main.scala:13:15 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m13 |[0m  [33mimplicit[0m [33mval[0m [36msystem[0m = ActorSystem([31m"solver-system"[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m               ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m               type of implicit definition needs to be given explicitly[0m
-[0m[[0m[31merror[0m] [0m[0merror while loading ElementType,[0m
-[0m[[0m[31merror[0m] [0m[0mclass file /modules/java.base/java/lang/annotation/ElementType.class is broken, reading aborted with class java.lang.RuntimeException[0m
-[0m[[0m[31merror[0m] [0m[0mbad constant pool index: 0 at pos: 1220[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/Main.scala:14:15 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m14 |[0m  [33mimplicit[0m [33mval[0m [36mec[0m = system.dispatcher[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m               ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m               type of implicit definition needs to be given explicitly[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:16:13 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m16 |[0m[33mimplicit[0m [33mval[0m [36mfunctionRequestFormat[0m = jsonFormat5(FunctionRequest)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m             ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m             type of implicit definition needs to be given explicitly[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:17:13 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m17 |[0m[33mimplicit[0m [33mval[0m [36msystemRequestFormat[0m = jsonFormat4(SystemRequest)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m             ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m             type of implicit definition needs to be given explicitly[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E124] Cyclic Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:17:46 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m17 |[0m[33mimplicit[0m [33mval[0m [36msystemRequestFormat[0m = jsonFormat4(SystemRequest)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                              ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[33mvalue[0m [35msystemRequestFormat[0m needs result type because its right-hand side attempts implicit search[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E172] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/Main.scala:29:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m29 |[0m  Http()[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mNo given instance of type akka.actor.ClassicActorSystemProvider was found for parameter system of [33mmethod[0m [35mapply[0m in [33mobject[0m [35mHttp[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mThe following import might fix the problem:[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import routes.NonLinearRoutes.systemRequestFormat[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E172] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:24:38 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m24 |[0m            entity(as[[35mFunctionRequest[0m]) { [36mrequest[0m =>[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                      ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mNo given instance of type akka.http.scaladsl.unmarshalling.FromRequestUnmarshaller[[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  solver.nonlinear.models.FunctionRequest] was found for parameter um of [33mmethod[0m [35mas[0m in [33mtrait[0m [35mMarshallingDirectives[0m.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mI found:[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    akka.http.scaladsl.unmarshalling.Unmarshaller.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      messageUnmarshallerFromEntityUnmarshaller[[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      [35msolver.nonlinear.models.FunctionRequest[0m]([0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        sprayJsonUnmarshaller[[35msolver.nonlinear.models.FunctionRequest[0m]([0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        /* missing */[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m          summon[spray.json.RootJsonReader[solver.nonlinear.models.FunctionRequest]][0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        )[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    )[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mBut no implicit values were found that match type spray.json.RootJsonReader[solver.nonlinear.models.FunctionRequest].[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E172] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:59:36 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m59 |[0m            entity(as[[35mSystemRequest[0m]) { [36mrequest[0m =>[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                    ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mNo given instance of type akka.http.scaladsl.unmarshalling.FromRequestUnmarshaller[[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  solver.nonlinear.models.SystemRequest] was found for parameter um of [33mmethod[0m [35mas[0m in [33mtrait[0m [35mMarshallingDirectives[0m.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mI found:[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    akka.http.scaladsl.unmarshalling.Unmarshaller.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      messageUnmarshallerFromEntityUnmarshaller[[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      [35msolver.nonlinear.models.SystemRequest[0m]([0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        sprayJsonUnmarshaller[[35msolver.nonlinear.models.SystemRequest[0m]([0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        /* missing */[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m          summon[spray.json.RootJsonReader[solver.nonlinear.models.SystemRequest]][0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      )[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    )[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mBut no implicit values were found that match type spray.json.RootJsonReader[solver.nonlinear.models.SystemRequest].[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:16:49 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m16 |[0m[33mimplicit[0m [33mval[0m [36mfunctionRequestFormat[0m = jsonFormat5(FunctionRequest)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                                                 ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsIntegrals.scala:11:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m11 |[0m    jsonFormat5(IntegralRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.integrals.models.IntegralRequest.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsIntegrals.scala:14:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m14 |[0m    jsonFormat4(IntegralResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.integrals.models.IntegralResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsIntegrals.scala:17:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m17 |[0m    jsonFormat2(SamplesResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.integrals.models.SamplesResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:11:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m11 |[0m    jsonFormat5(FunctionRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.FunctionRequest.apply` explicitly.[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/NonLinearRoutes.scala:17:47 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m17 |[0m[33mimplicit[0m [33mval[0m [36msystemRequestFormat[0m = jsonFormat4(SystemRequest)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                                               ^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:14:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m14 |[0m    jsonFormat5(FunctionResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.FunctionResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:17:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m17 |[0m    jsonFormat4(SystemRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.SystemRequest.apply` explicitly.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:8:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m8 |[0m    f = [36mx[0m => -x*x*x - x*x - [31m2[0m*x + [31m1[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:14:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m14 |[0m    f = [36mx[0m => -[31m3[0m*x*x*x - [31m5[0m*x*x + [31m4[0m*x - [31m2[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:20:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m20 |[0m    f = [36mx[0m => -x*x*x - x*x + x + [31m3[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:26:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m26 |[0m    f = [36mx[0m => -[31m2[0m*x*x*x - [31m4[0m*x*x + [31m8[0m*x - [31m4[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:32:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m32 |[0m    f = [36mx[0m => -[31m2[0m*x*x*x - [31m3[0m*x*x + x + [31m5[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:38:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m38 |[0m    f = [36mx[0m => [31m3[0m*x*x*x + [31m5[0m*x*x + [31m3[0m*x - [31m6[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:44:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m44 |[0m    f = [36mx[0m => [31m4[0m*x*x*x - [31m5[0m*x*x + [31m6[0m*x - [31m7[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:50:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m50 |[0m    f = [36mx[0m => [31m3[0m*x*x*x - [31m2[0m*x*x - [31m7[0m*x - [31m8[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:56:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m56 |[0m    f = [36mx[0m => [31m2[0m*x*x*x - [31m3[0m*x*x + [31m5[0m*x - [31m9[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:62:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m62 |[0m    f = [36mx[0m => x*x*x - [31m3[0m*x*x + [31m7[0m*x - [31m10[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:68:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m68 |[0m    f = [36mx[0m => [31m2[0m*x*x*x - [31m9[0m*x*x - [31m7[0m*x + [31m11[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:74:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m74 |[0m    f = [36mx[0m => x*x*x + [31m2[0m*x*x - [31m3[0m*x - [31m12[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:80:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m80 |[0m    f = [36mx[0m => -[31m2[0m*x*x*x - [31m5[0m*x*x + [31m7[0m*x - [31m13[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:86:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m86 |[0m    f = [36mx[0m => [31m2[0m*x*x*x - [31m2[0m*x*x + [31m7[0m*x - [31m14[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:92:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m92 |[0m    f = [36mx[0m => [31m5[0m*x*x*x - [31m2[0m*x*x + [31m3[0m*x - [31m15[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:98:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m98 |[0m    f = [36mx[0m => [31m3[0m*x*x*x - [31m4[0m*x*x + [31m5[0m*x - [31m16[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:104:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m104 |[0m    f = [36mx[0m => [31m3[0m*x*x*x - [31m4[0m*x*x + [31m7[0m*x - [31m17[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:110:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m110 |[0m    f = [36mx[0m => x*x*x - [31m5[0m*x*x + [31m3[0m*x - [31m16[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:116:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m116 |[0m    f = [36mx[0m => x*x*x - [31m3[0m*x*x + [31m6[0m*x - [31m19[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:122:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m122 |[0m    f = [36mx[0m => [31m4[0m*x*x*x - [31m3[0m*x*x + [31m5[0m*x - [31m20[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:128:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m128 |[0m    f = [36mx[0m => [31m2[0m*x*x*x - [31m5[0m*x*x - [31m3[0m*x + [31m21[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:134:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m134 |[0m    f = [36mx[0m => [31m2[0m*x*x*x - [31m3[0m*x*x + [31m4[0m*x - [31m22[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:140:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m140 |[0m    f = [36mx[0m => -x*x*x - [31m2[0m*x*x + [31m3[0m*x + [31m23[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:146:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m146 |[0m    f = [36mx[0m => x*x*x - [31m2[0m*x*x - [31m5[0m*x + [31m24[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:152:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m152 |[0m    f = [36mx[0m => [31m2[0m*x*x*x - [31m4[0m*x*x + [31m6[0m*x - [31m25[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E081] Type Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/integrals/Integrals.scala:158:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m158 |[0m    f = [36mx[0m => [31m3[0m*x*x*x - [31m2[0m*x*x + [31m7[0m*x + [31m26[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Missing parameter type[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        I could not infer the type of the parameter x.[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/models/ApiResponse.scala:4:10 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m4 |[0m  status: [35mMessage[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m          ^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m          Not found: type Message[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/models/ApiResponse.scala:5:15 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m5 |[0m  data: [35mOption[0m[[35mIntegral[0m],[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m               ^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m          Type argument Integral does not have the same kind as its bound [0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/models/ApiResponse.scala:10:10 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m10 |[0m  status: [35mMessage[0m,[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m          ^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m          Not found: type Message[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/integrals/models/Response.scala:19:16 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m19 |[0m  systems: [35mList[0m[[35mSystemSample[0m],[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                ^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                Not found: type SystemSample[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
-[0m[[0m[31merror[0m] [0m[0m39 errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:20:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m20 |[0m    jsonFormat5(SystemResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.SystemResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:23:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m23 |[0m    jsonFormat2(MethodsResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.MethodsResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:26:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m26 |[0m    jsonFormat3(SamplesResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.SamplesResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m9 warnings found[0m

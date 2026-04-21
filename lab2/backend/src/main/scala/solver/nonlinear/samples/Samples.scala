@@ -32,35 +32,35 @@ object Samples {
     "x³ - 2,56x² - sin(x) + 4,395"
   )
 
-  val systems = List(
-    SystemSample("sin(x+1) - y - 1.2 = 0", "2x + cos(y) - 2 = 0"),
-    SystemSample("tg(xy + 0.1) - x² = 0", "x² + 2y² - 1 = 0"),
-    SystemSample("cos(x-1) + y - 0.5 = 0", "x - cos(y) - 3 = 0"),
-    SystemSample("sin(x+y) - 1.2x - 0.2 = 0", "x² + 2y² - 1 = 0"),
-    SystemSample("tg(xy + 0.3) - x² = 0", "0.9x² + 2y² - 1 = 0"),
-    SystemSample("sin(x) + 2y - 2 = 0", "x + cos(y-1) - 0.7 = 0"),
-    SystemSample("2x - sin(y-0.5) - 1 = 0", "y + cos(x) - 1.5 = 0"),
-    SystemSample("tg(xy) - x² = 0", "0.8x² + 2y² - 1 = 0"),
-    SystemSample("sin(x+y) - 1.5x + 0.1 = 0", "x² + 2y² - 1 = 0"),
-    SystemSample("sin(x+0.5) - y - 1 = 0", "cos(y-2) + x = 0"),
-    SystemSample("tg(xy + 0.2) - x² = 0", "x² + 2y² - 1 = 0"),
-    SystemSample("x + sin(y) + 0.4 = 0", "2y - cos(x+1) = 0"),
-    SystemSample("sin(y) + 2x - 2 = 0", "y + cos(x-1) - 0.7 = 0"),
-    SystemSample("sin(x+y) - 1.4x = 0", "x² + y² - 1 = 0"),
-    SystemSample("sin(x-1) + y - 1.5 = 0", "x - sin(y+1) - 1 = 0"),
-    SystemSample("y - cos(x) - 2 = 0", "x + cos(y-1) - 0.8 = 0"),
-    SystemSample("tg(xy) - x² = 0", "0.5x² + 2y² - 1 = 0"),
-    SystemSample("sin(y+2) - x - 1.5 = 0", "y + cos(x-2) - 0.5 = 0"),
-    SystemSample("sin(y-1) + x - 1.3 = 0", "y - sin(x+1) - 0.8 = 0"),
-    SystemSample("sin(x+y) - 1.1x - 0.1 = 0", "x² + y² - 1 = 0"),
-    SystemSample("cos(y) + x - 1.5 = 0", "2y - sin(x-0.5) - 1 = 0"),
-    SystemSample("tg(xy + 0.3) - x² = 0", "0.5x² + 2y² - 1 = 0"),
-    SystemSample("sin(y+0.5) - x - 1 = 0", "y + cos(x-2) = 0"),
-    SystemSample("sin(x-y) - xy + 1 = 0", "0.3x² + y² - 2 = 0"),
-    SystemSample("cos(x+0.5) + y - 1 = 0", "sin(y) - 2x - 2 = 0"),
-    SystemSample("cos(x+0.5) + y - 0.7 = 0", "sin(y) - 0.5x - 2 = 0")
+  val systems: List[List[String]] = List(
+    List("sin(x+1) - y - 1.2 = 0", "2x + cos(y) - 2 = 0"),
+    List("tg(xy + 0.1) - x² = 0", "x² + 2y² - 1 = 0"),
+    List("cos(x-1) + y - 0.5 = 0", "x - cos(y) - 3 = 0"),
+    List("sin(x+y) - 1.2x - 0.2 = 0", "x² + 2y² - 1 = 0"),
+    List("tg(xy + 0.3) - x² = 0", "0.9x² + 2y² - 1 = 0"),
+    List("sin(x) + 2y - 2 = 0", "x + cos(y-1) - 0.7 = 0"),
+    List("2x - sin(y-0.5) - 1 = 0", "y + cos(x) - 1.5 = 0"),
+    List("tg(xy) - x² = 0", "0.8x² + 2y² - 1 = 0"),
+    List("sin(x+y) - 1.5x + 0.1 = 0", "x² + 2y² - 1 = 0"),
+    List("sin(x+0.5) - y - 1 = 0", "cos(y-2) + x = 0"),
+    List("tg(xy + 0.2) - x² = 0", "x² + 2y² - 1 = 0"),
+    List("x + sin(y) + 0.4 = 0", "2y - cos(x+1) = 0"),
+    List("sin(y) + 2x - 2 = 0", "y + cos(x-1) - 0.7 = 0"),
+    List("sin(x+y) - 1.4x = 0", "x² + y² - 1 = 0"),
+    List("sin(x-1) + y - 1.5 = 0", "x - sin(y+1) - 1 = 0"),
+    List("y - cos(x) - 2 = 0", "x + cos(y-1) - 0.8 = 0"),
+    List("tg(xy) - x² = 0", "0.5x² + 2y² - 1 = 0"),
+    List("sin(y+2) - x - 1.5 = 0", "y + cos(x-2) - 0.5 = 0"),
+    List("sin(y-1) + x - 1.3 = 0", "y - sin(x+1) - 0.8 = 0"),
+    List("sin(x+y) - 1.1x - 0.1 = 0", "x² + y² - 1 = 0"),
+    List("cos(y) + x - 1.5 = 0", "2y - sin(x-0.5) - 1 = 0"),
+    List("tg(xy + 0.3) - x² = 0", "0.5x² + 2y² - 1 = 0"),
+    List("sin(y+0.5) - x - 1 = 0", "y + cos(x-2) = 0"),
+    List("sin(x-y) - xy + 1 = 0", "0.3x² + y² - 2 = 0"),
+    List("cos(x+0.5) + y - 1 = 0", "sin(y) - 2x - 2 = 0"),
+    List("cos(x+0.5) + y - 0.7 = 0", "sin(y) - 0.5x - 2 = 0")
   )
-
+  
   val methodsFunctions = List(
     "Chord method",
     "Secant method",

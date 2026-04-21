@@ -1,6 +1,9 @@
 package solver.integrals.integrals
 
-case class FunctionResult(
+import solver.core.Message
+
+case class IntegralsResult(
   value: Double,
   n: Int,
+  message: Message
 )

@@ -1,5 +1,6 @@
 package routes
 
+import spray.json.RootJsonFormat
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
@@ -9,12 +10,10 @@ import solver.nonlinear.Library
 import solver.nonlinear.samples.Samples
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import solver.nonlinear.models._
-
+import solver.core.Message
+import routes.formats.JsonFormatsNonLinear._
 
 object NonLinearRoutes {
-
-implicit val functionRequestFormat = jsonFormat5(FunctionRequest)
-implicit val systemRequestFormat = jsonFormat4(SystemRequest)
 
   val routes: Route =
     pathPrefix("nonlinear") {
@@ -32,28 +31,26 @@ implicit val systemRequestFormat = jsonFormat4(SystemRequest)
               resultOpt match {
 
                 case Some(result) =>
-                  complete(
-                    JsObject(
-                      "success" -> JsBoolean(true),
-                      "x" -> JsNumber(result.x),
-                      "fx" -> JsNumber(result.fx),
-                      "iterations" -> JsNumber(result.iterations),
-                      "message" -> JsString(result.message.getOrElse("OK"))
-                    )
-                  )
-
+                  complete(FunctionResponse(
+                    success = true,
+                    x = result.x,
+                    fx = result.fx,
+                    iterations = result.iterations,
+                    message = result.message.toString
+                  ))
+              
                 case None =>
-                  complete(
-                    JsObject(
-                      "success" -> JsBoolean(false),
-                      "error" -> JsString("Неверный id функции или метода")
-                    )
-                  )
+                  complete(FunctionResponse(
+                    success = false, 
+                    x = 0, 
+                    fx = 0, 
+                    iterations = 0, 
+                    message = Message.BadId.toString
+                  ))
               }
             }
           }
         },
-
         path("system") {
           post {
             entity(as[SystemRequest]) { request =>
@@ -66,48 +63,41 @@ implicit val systemRequestFormat = jsonFormat4(SystemRequest)
 
               resultOpt match {
 
-                case Some(result) =>
-                  complete(
-                    JsObject(
-                      "success" -> JsBoolean(true),
-                      "x" -> JsArray(result.x.map(JsNumber(_)).toVector),
-                      "fx" -> JsArray(result.fx.map(JsNumber(_)).toVector),
-                      "iterations" -> JsNumber(result.iterations),
-                      "message" -> JsString(result.message.getOrElse("OK"))
-                    )
-                  )
-
-                case None =>
-                  complete(
-                    JsObject(
-                      "success" -> JsBoolean(false),
-                      "error" -> JsString("Неверный id системы или метода")
-                    )
-                  )
+              case Some(result) =>
+                complete(SystemResponse(
+                  success = true,
+                  x = result.x,
+                  fx = result.fx,
+                  iterations = result.iterations,
+                  message = result.message.toString
+                ))
+            
+              case None =>
+                complete(SystemResponse(
+                  success = false, 
+                  x = Array.empty[Double], 
+                  fx = Array.empty[Double], 
+                  iterations = 0, 
+                  message = Message.BadId.toString
+                ))
               }
             }
           }
         },
         path("samples") {
           get {
-            complete(
-              JsObject(
-                "functions" -> JsArray(
-                  Samples.functions.map(JsString(_)).toVector
-                ),
-                "systems" -> JsArray(
-                  Samples.systems.map { s =>
-                    JsArray(JsString(s.eq1), JsString(s.eq2))
-                  }.toVector
-                ),
-                "methods" -> JsObject(
-                  "function" -> JsArray(Samples.methodsFunctions.map(JsString(_)).toVector),
-                  "system" -> JsArray(Samples.methodsSystems.map(JsString(_)).toVector)
-                )
+            
+            val response = SamplesResponse(
+              functions = Samples.functions,
+              systems = Samples.systems, 
+              methods = MethodsResponse(
+                function = Samples.methodsFunctions,
+                system = Samples.methodsSystems
               )
             )
+            complete(response)
           }
-        },
+        }
       )
     }
 }

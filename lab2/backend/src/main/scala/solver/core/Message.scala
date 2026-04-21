@@ -1,7 +1,15 @@
 package solver.core
 
-enum Message :
+enum Message:
+
   case Success
-  case BadParameters
-  case ServerError
-  case MethodDoesNotConverge
+  case BadParameters   
+  case BadId
+  case ServerError     
+
+  case MethodDoesNotConverge   
+  case IterationLimitExceeded 
+  case NoRootInInterval       
+  case DivisionByZero          
+
+  case MaxPartitionsReached   

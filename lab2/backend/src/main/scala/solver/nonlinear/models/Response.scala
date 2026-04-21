@@ -1,22 +1,24 @@
 package solver.nonlinear.models
 
-import solver.nonlinear.samples.SystemSample  
-
 case class FunctionResponse(
+    success: Boolean,
     x: Double, 
     fx: Double, 
-    iterations: Int
+    iterations: Int,
+    message: String
 )
 
 case class SystemResponse(
+    success: Boolean,
     x: Array[Double], 
     fx: Array[Double], 
-    iterations: Int
+    iterations: Int,
+    message: String 
 )
 
 case class SamplesResponse(
   functions: List[String],
-  systems: List[SystemSample],
+  systems: List[List[String]],
   methods: MethodsResponse
 )
 

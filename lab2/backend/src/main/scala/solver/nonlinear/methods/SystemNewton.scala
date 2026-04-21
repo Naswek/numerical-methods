@@ -2,6 +2,7 @@ package solver.nonlinear.methods
 
 import solver.nonlinear.systems.Utils._
 import solver.nonlinear.systems.{SystemMethod, SystemPack, SystemResult}
+import solver.core.Message
 
 class SystemNewton extends SystemMethod {
 
@@ -12,7 +13,7 @@ class SystemNewton extends SystemMethod {
         x0,
         Array(0, 0), 
         0,
-        Some(s"Введено неверное количество начальных приближений: ${x0.length}")
+        Message.BadParameters
       )
     }
     
@@ -24,7 +25,7 @@ class SystemNewton extends SystemMethod {
         x0, 
         initialFx, 
         0, 
-        Some(s"Ошибка ввода: система состоит из ${initialFx.length} уравнений, а вы ввели ${x0.length} начальных приближений.")
+        Message.BadParameters
       )
     }
  
@@ -41,7 +42,7 @@ class SystemNewton extends SystemMethod {
       fx = system.f(x)
 
       if (norm(fx) < eps)
-        return new SystemResult(x, fx, iterations, None)
+        return new SystemResult(x, fx, iterations, Message.BadParameters)
 
       val J = numericalJacobian(system.f, x)
       val dx = solveLinear(J, fx.map(-_))
@@ -55,6 +56,6 @@ class SystemNewton extends SystemMethod {
 
     fx = system.f(x)
 
-    new SystemResult(x, fx, iterations, if (iterations >= 1000) Some("Превышено максимальное количество итераций") else None)
+    new SystemResult(x, fx, iterations, if (iterations >= 1000) Message.IterationLimitExceeded else Message.Success)
   }
 }
