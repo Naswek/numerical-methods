@@ -1,6 +1,7 @@
 package solver.integrals.integrals
 
 import solver.integrals.integrals.IntegralsPack
+import scala.math._
 
 object Integrals {
 
@@ -106,5 +107,21 @@ object Integrals {
 
   val i26: IntegralsPack = IntegralsPack(
     f = x => 3*x*x*x - 2*x*x + 7*x + 26
+  )
+  
+  val i27: IntegralsPack = IntegralsPack(
+    f = x => 2*x*x*x - 5*x*x - 3*x + 21
+  )
+
+  val i28: IntegralsPack = IntegralsPack(
+    f = x => 1/x
+  )
+  
+  val i29: IntegralsPack = IntegralsPack(
+    f = x => 1/sqrt(x)
+  )
+  
+  val i30: IntegralsPack = IntegralsPack(
+    f = x => 1/(x*x)
   )
 }

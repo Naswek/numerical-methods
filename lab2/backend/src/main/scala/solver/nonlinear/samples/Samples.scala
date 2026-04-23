@@ -62,12 +62,12 @@ object Samples {
   )
   
   val methodsFunctions = List(
-    "Chord method",
-    "Secant method",
-    "Simple iteration method"
+    "Метод хорд",
+    "Метод секущих",
+    "Метод простой итерации"
   )
 
   val methodsSystems = List(
-    "System Newton method"
+    "Метод Ньютона"
   )
 }

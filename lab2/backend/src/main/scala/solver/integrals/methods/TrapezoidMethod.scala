@@ -4,7 +4,7 @@ import solver.integrals.integrals.{IntegralsPack, IntegrationMethod, IntegralsRe
 import solver.core.Message
 
 class TrapezoidMethod extends IntegrationMethod {
-override def solve(pack: IntegralsPack, a: Double, b: Double, eps: Double): IntegralsResult = {
+override protected def calculateAlgorithm(pack: IntegralsPack, a: Double, b: Double, eps: Double): IntegralsResult = {
   if (a == b) return IntegralsResult(0.0, 0, Message.Success)
 
   def calculateTrapezoidal(n: Int): Double = {

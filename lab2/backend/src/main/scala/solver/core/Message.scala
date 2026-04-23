@@ -12,4 +12,5 @@ enum Message:
   case NoRootInInterval       
   case DivisionByZero          
 
-  case MaxPartitionsReached   
+  case MaxPartitionsReached
+  case IntegralDoesNotExist  
