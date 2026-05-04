@@ -13,4 +13,5 @@ enum Message:
   case DivisionByZero          
 
   case MaxPartitionsReached
-  case IntegralDoesNotExist  
+  case IntegralDoesNotExist
+  case IntervalWasChanged  
