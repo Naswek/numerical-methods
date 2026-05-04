@@ -18,7 +18,12 @@ trait IntegrationMethod {
       if (midIsBad) {
         val res1 = calculateAlgorithm(pack, a, mid - delta, eps)
         val res2 = calculateAlgorithm(pack, mid + delta, b, eps)
-        return IntegralsResult(res1.value + res2.value, res1.n + res2.n, Message.Success)
+        
+        if (res1.value.isNaN || res2.value.isNaN) {
+          return IntegralsResult(0, 0, Message.IntegralDoesNotExist)
+        }
+        
+        return IntegralsResult(res1.value + res2.value, res1.n + res2.n, Message. IntervalWasChanged)
       }
 
       val safeA = if (aIsBad) a + delta else a
@@ -33,8 +38,15 @@ trait IntegrationMethod {
         }
       }
 
-      calculateAlgorithm(pack, safeA, safeB, eps)
+      var finalResult = calculateAlgorithm(pack, safeA, safeB, eps)
 
+      if (finalResult.value.isNaN) {
+         return IntegralsResult(0, 0, Message.IntegralDoesNotExist)
+      }
+      
+      val updatedResult = finalResult.copy(message = Message.IntervalWasChanged)
+      
+      return updatedResult
     } catch {
       case _: Throwable => IntegralsResult(0, 0, Message.IntegralDoesNotExist)
     }

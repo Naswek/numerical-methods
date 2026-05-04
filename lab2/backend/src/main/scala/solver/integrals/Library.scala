@@ -1,7 +1,7 @@
 package solver.integrals
 
 import solver.integrals.integrals.{IntegralsPack, Integrals, IntegrationMethod}
-import solver.integrals.methods.{RectangleMethod, SimpsonMethod, TrapezoidMethod, MonteCarloMethod}
+import solver.integrals.methods.{RectangleMethodRight, RectangleMethodLeft, RectangleMethodMid, SimpsonMethod, TrapezoidMethod, MonteCarloMethod}
 
 object Library {
     val integralsPack: Map[Int, IntegralsPack] = Map(
@@ -39,9 +39,11 @@ object Library {
 
 
     val integralsMethods: Map[Int, IntegrationMethod] = Map(
-        0 -> new RectangleMethod,
-        1 -> new TrapezoidMethod,
-        2 -> new SimpsonMethod,
-        3 -> new MonteCarloMethod
+        0 -> new TrapezoidMethod,
+        1 -> new SimpsonMethod,
+        2 -> new MonteCarloMethod,
+        3 -> new RectangleMethodLeft,
+        4 -> new RectangleMethodMid,
+        5 -> new RectangleMethodRight
     )
 }

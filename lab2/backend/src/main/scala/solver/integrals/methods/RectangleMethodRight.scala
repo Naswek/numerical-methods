@@ -3,7 +3,7 @@ package solver.integrals.methods
 import solver.integrals.integrals.{IntegralsPack, IntegrationMethod, IntegralsResult}
 import solver.core.Message
 
-class RectangleMethod extends IntegrationMethod {
+class RectangleMethodRight extends IntegrationMethod {
 override protected def calculateAlgorithm(pack: IntegralsPack, a: Double, b: Double, eps: Double): IntegralsResult = {
   if (a == b) return IntegralsResult(0.0, 0, Message.Success)
 
@@ -26,7 +26,7 @@ override protected def calculateAlgorithm(pack: IntegralsPack, a: Double, b: Dou
     n *= 2
     iCurr = calculateRight(n)
 
-    if (math.abs(iCurr - iPrev) / 3.0 <= eps) {
+    if (math.abs(iCurr - iPrev) / 1.0 <= eps) {
       return IntegralsResult(iCurr, n, Message.Success)
     }
 
