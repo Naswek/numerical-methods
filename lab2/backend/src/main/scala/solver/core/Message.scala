@@ -14,4 +14,8 @@ enum Message:
 
   case MaxPartitionsReached
   case IntegralDoesNotExist
-  case IntervalWasChanged  
+  case IntervalWasChanged 
+ 
+  case NotEnoughPoints
+  case InvalidDataForModel
+  case SingularMatrix  
