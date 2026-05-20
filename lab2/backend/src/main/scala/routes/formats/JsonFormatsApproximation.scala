@@ -15,10 +15,16 @@ object JsonFormatsApproximation extends DefaultJsonProtocol {
       case JsString(value) => Message.valueOf(value)
       case _ => throw DeserializationException("Сообщение должно быть стринг")
       }
-  }
+    }
 
+  implicit val pointFormat: RootJsonFormat[Point] = 
+    jsonFormat2(Point)
+
+  implicit val approximationResultFormat: RootJsonFormat[ApproximationResult] = 
+    jsonFormat7(ApproximationResult)
+      
   implicit val approximationRequestFormat: RootJsonFormat[ApproximationRequest] =
-    jsonFormat5(ApproximationRequest)
+    jsonFormat4(ApproximationRequest)
   
   implicit val approximationResponseFormat: RootJsonFormat[ApproximationResponse] =
     jsonFormat5(ApproximationResponse)
@@ -26,11 +32,9 @@ object JsonFormatsApproximation extends DefaultJsonProtocol {
   implicit val samplesResponseFormat: RootJsonFormat[SampleResponse] =
     jsonFormat2(SampleResponse)
 
-  implicit val pointFormat: RootJsonFormat[Point] = 
-    jsonFormat2(Point)
 
-   implicit val approximationResultFormat: RootJsonFormat[ApproximationResult] = 
-    jsonFormat7(ApproximationResult)
+
+
 
 
 }

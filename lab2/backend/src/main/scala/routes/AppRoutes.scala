@@ -9,11 +9,12 @@ import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 
 
 object AppRoutes {
-println("APP ROUTES INIT")    
+println("app routes init")    
   val routes: Route = pathPrefix("api" / "v1") {
           concat(
               NonLinearRoutes.routes,
               IntegralsRoutes.routes,
+              ApproximationRoutes.routes,
               path("test") {
                   get {
                       complete("Ит воркс!")

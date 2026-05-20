@@ -30,7 +30,7 @@ class Exponential extends Approximator {
 
     ApproximationResult(
       methodName = name, 
-      equation = f"y = $a%.3f * e^($b%.3fx)",
+      equation = f"y = $a%.3f * e^{(${b}%.3f * x)}",
       coefficients = Seq(a, b),
       mse = mse,
       rSquared = calculateRSquared(points, f),

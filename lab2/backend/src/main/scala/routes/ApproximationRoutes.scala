@@ -14,7 +14,7 @@ import solver.approximation.samples._
 import solver.approximation.functions.Point
 import routes.formats.JsonFormatsApproximation._
 
-object approximationRoutes {
+object ApproximationRoutes {
   val routes: Route =
     pathPrefix("approximation") {
       concat(
@@ -24,6 +24,7 @@ object approximationRoutes {
             
             val response = Library.functions.get(request.functionId) match {
               case Some(functionPack) =>
+                println(Library.functions.get(request.functionId).toString)    
                 val points = generatePoints(functionPack.f, request.a, request.b, request.h)
                 val allResults = Library.approximationFunctions.values.map(solver => solver.solve(points)).toSeq
                 
@@ -72,9 +73,11 @@ object approximationRoutes {
     }
 
   private def generatePoints(f: Double => Double, a: Double, b: Double, h: Double): Seq[Point] = {
-    (BigDecimal(a) to BigDecimal(b) by BigDecimal(h)).map { x =>
-      val xVal = x.toDouble
-      Point(xVal, f(xVal))
-    }.toSeq
+  (BigDecimal(a) to BigDecimal(b) by BigDecimal(h)).flatMap { x =>
+    val xVal = x.toDouble
+    val yVal = f(xVal)
+    if (yVal.isFinite && !yVal.isNaN) Some(Point(xVal, yVal))
+    else None
+  }.toSeq
   }
 }

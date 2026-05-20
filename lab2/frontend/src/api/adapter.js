@@ -8,7 +8,11 @@ export function translateMessage(msg) {
     "NoRootInInterval": "В данном промежутке нет корня",
     "DivisionByZero": "Предупреждение: деление на ноль / производная близка к нулю",
     "MaxPartitionsReached": "Достигнут предел разбиений (точность не гарантируется)",
-    "IntegralDoesNotExist": "Интеграл не существует (расходится)"
+    "IntegralDoesNotExist": "Интеграл не существует (расходится)",
+    "IntervalWasChanged": "Границы интервала были незначитально изменены для обхода точки разрыва",
+    "NotEnoughPoints" : "Не хватило точек для применения метода",
+    "InvalidDataForModel" : "Невалидные данные для модели",
+    "SingularMatrix" : "Определитель матрицы равен нулю" 
   };
   return dictionary[msg] || msg;
 }
@@ -21,7 +25,8 @@ export function adaptSamples(raw) {
     methods: {
       function: Array.isArray(raw?.methods?.function) ? raw.methods.function : [],
       system: Array.isArray(raw?.methods?.system) ? raw.methods.system : [],
-      integrals: Array.isArray(raw?.methods) ? raw.methods : [] 
+      integrals: Array.isArray(raw?.methods) ? raw.methods : [],
+      approximators: Array.isArray(raw?.methods) ? raw.methods : []
     }
   };
 }
@@ -51,5 +56,25 @@ export function adaptIntegralResult(raw) {
     n: raw?.n ?? 0,
     message: translateMessage(raw?.message),
     isError: raw?.message === "IntegralDoesNotExist"
+  };
+}
+
+export function adaptApproximationResult(raw) {
+  return {
+    success: raw?.success ?? false,
+    bestMethod: raw?.bestMethod ?? "",
+    globalMessage: translateMessage(raw?.message),
+    sourcePoints: Array.isArray(raw?.sourcePoints) ? raw.sourcePoints : [],
+    
+    results: Array.isArray(raw?.results) ? raw.results.map(res => ({
+      methodName: res.methodName,
+      equation: res.equation,
+      mse: typeof res.mse === 'number' ? res.mse.toFixed(4) : "—",
+      rSquared: typeof res.rSquared === 'number' ? res.rSquared.toFixed(4) : "—",
+      pearson: typeof res.pearson === 'number' ? res.pearson.toFixed(4) : "—",
+      message: translateMessage(res.message),
+      isSuccess: res.message === "Success",
+      coefficients: res.coefficients ?? [],
+    })) : []
   };
 }

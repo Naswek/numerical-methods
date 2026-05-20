@@ -31,7 +31,8 @@ object Samples {
     "∫ (2x³ - 5x² - 3x + 21) dx", 
     "∫ 1 / x dx",                 
     "∫ 1 / √(x) dx",              
-    "∫ 1 / x² dx"    
+    "∫ 1 / x² dx",
+    "x^3"
   )
   
   val integralsMethods = List(

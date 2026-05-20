@@ -19,20 +19,7 @@ object Library {
       11 -> Functions.p12,
       12 -> Functions.p13,
       13 -> Functions.p14,
-      14 -> Functions.p15,
-      15 -> Functions.p16,
-      16 -> Functions.p17,
-      17 -> Functions.p18,
-      18 -> Functions.p19,
-      19 -> Functions.p20,
-      20 -> Functions.p21,
-      21 -> Functions.p22,
-      22 -> Functions.p23,
-      23 -> Functions.p24,
-      24 -> Functions.p25,
-      25 -> Functions.p26,
-      26 -> Functions.p27,
-      27 -> Functions.p28
+      14 -> Functions.p15
     )
 
 

@@ -5,7 +5,7 @@ import solver.core.Message
 
 class GaussMethod extends IntegrationMethod {
   override protected def calculateAlgorithm(pack: IntegralsPack, a: Double, b: Double, eps: Double): IntegralsResult = {
-    if (a == b) return IntegralsResult(0.0, 0, Message.Success)
+    if (a == b) return IntegralsResult(0.0, 0, Message.BadParameters)
     val t1 = -1.0 / math.sqrt(3.0)
     val t2 = 1.0 / math.sqrt(3.0)
 
