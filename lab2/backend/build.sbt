@@ -11,6 +11,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" % "akka-stream_3"      % "2.8.5",
   "com.typesafe.akka" % "akka-http_3"        % "10.5.3",
   "com.typesafe.akka" % "akka-http-spray-json_3" % "10.5.3",
+  "org.scalatestplus" %% "scalacheck-1-17" % "3.2.18.0" % Test,
+  "org.scalatest"     %% "scalatest"       % "3.2.18"   % Test,
   ("ch.megard" % "akka-http-cors_3" % "1.2.0")
     .excludeAll(
       ExclusionRule("com.typesafe.akka", "akka-http-core_2.13"),

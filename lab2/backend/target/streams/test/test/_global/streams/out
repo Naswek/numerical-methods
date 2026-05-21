@@ -1,0 +1,14 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(solver.approximation.Approximation, org.scalatest.tools.Framework$$anon$1@74735e86, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mApproximation:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы никогда не должны выбрасывать исключения[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- MSE всегда неотрицательно[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Коэффициент детерминации R^2 не должен превышать 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Log и Grade должны корректно обрабатывать невалидные данные[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы должны возвращать ошибку, если данные вырожденные (все X одинаковы)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 325 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	solver.approximation.Approximation[0m
