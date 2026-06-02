@@ -10,12 +10,11 @@ class Lagrange extends Interpolator {
   override def solve(points: Seq[Point], targetX: Double): InterpolationResult = {
     val n = points.size
     
-    // Проверка: нужно минимум 2 точки
     if (n < 2) {
       return InterpolationResult(name, 0, Seq.empty, Message.NotEnoughPoints)
     }
 
-    // Проверка на дубликаты X (чтобы не было деления на ноль)
+    
     if (points.map(_.x).distinct.size != n) {
       return InterpolationResult(name, 0, Seq.empty, Message.BadParameters)
     }
@@ -35,7 +34,7 @@ class Lagrange extends Interpolator {
     InterpolationResult(
       methodName = name,
       value = result,
-      differenceTable = Seq(points.map(_.y)), // Для Лагранжа таблица не обязательна, вернем Y
+      differenceTable = Seq(points.map(_.y)), 
       message = Message.Success
     )
   }

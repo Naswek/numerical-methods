@@ -90,7 +90,7 @@ export default function ApproximationPage() {
         setError(res.message || "Ошибка при расчете");
       }
     } catch (err) {
-      setError("Сервер недоступен или произошла ошибка: " + err.message);
+      setError(err.message);
       setResult(null);
     } finally {
       setLoading(false);

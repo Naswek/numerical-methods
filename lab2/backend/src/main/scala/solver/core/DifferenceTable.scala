@@ -1,8 +1,9 @@
 package solver.interpolation.core
 
+import solver.interpolation.models.Point
+
 object DifferenceTable {
   
-  // Построение таблицы КОНЕЧНЫХ разностей (для равных промежутков)
   def finite(y: Seq[Double]): Seq[Seq[Double]] = {
     val n = y.size
     val table = Array.ofDim[Double](n, n)
@@ -16,7 +17,6 @@ object DifferenceTable {
     table.map(_.toSeq).toSeq
   }
 
-  // Построение таблицы РАЗДЕЛЕННЫХ разностей (для любых x)
   def divided(points: Seq[Point]): Seq[Seq[Double]] = {
     val n = points.size
     val table = Array.ofDim[Double](n, n)

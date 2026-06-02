@@ -15,6 +15,7 @@ println("app routes init")
               NonLinearRoutes.routes,
               IntegralsRoutes.routes,
               ApproximationRoutes.routes,
+              InterpolationRoutes.routes,
               path("test") {
                   get {
                       complete("Ит воркс!")

@@ -1,5 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /home/naswek/scala_projects/lab2/backend/src/test/scala/solver/Approximation.scala:7:28 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m7 |[0m[33mimport[0m solver.approximation.methods._[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m       value methods is not a member of solver.approximation[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

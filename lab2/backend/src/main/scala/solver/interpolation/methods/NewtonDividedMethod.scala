@@ -12,12 +12,9 @@ class NewtonDivided extends Interpolator {
     val n = points.size
     if (n < 2) return InterpolationResult(name, 0, Seq.empty, Message.NotEnoughPoints)
 
-    // 1. Считаем таблицу разделенных разностей
     val table = DifferenceTable.divided(points)
     
-    // 2. Считаем значение по формуле Ньютона
-    // P(x) = y0 + (x-x0)f[x0,x1] + (x-x0)(x-x1)f[x0,x1,x2] + ...
-    var result = table(0)(0) // Это y0
+    var result = table(0)(0)
     var xPart = 1.0
 
     for (j <- 1 until n) {
