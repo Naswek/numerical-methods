@@ -25,7 +25,7 @@ export default function ApproximationForm({
     ? (isAandBValid && isHValid ? Math.floor((numB - numA) / numH) + 1 : 0)
     : manualPoints.length;
 
-  const isPointsCountValid = pointsCount >= 8 && pointsCount <= 12;
+  const isPointsCountValid = pointsCount >= 8 && pointsCount <= 150;
 
   const isManualDataValid = !isGenerate && manualPoints.every(p => isValidNum(p.x) && isValidNum(p.y));
 
@@ -147,10 +147,10 @@ export default function ApproximationForm({
             <button 
               type="button" 
               onClick={addPoint} 
-              disabled={manualPoints.length >= 12}
-              style={{ padding: "8px", borderRadius: "6px", cursor: manualPoints.length >= 12 ? "not-allowed" : "pointer", border: "1px dashed #007bff", color: "#007bff", backgroundColor: "transparent" }}
+              disabled={manualPoints.length >= 150}
+              style={{ padding: "8px", borderRadius: "6px", cursor: manualPoints.length >= 150 ? "not-allowed" : "pointer", border: "1px dashed #007bff", color: "#007bff", backgroundColor: "transparent" }}
             >
-              + Добавить точку ({manualPoints.length}/12)
+              + Добавить точку ({manualPoints.length}/150)
             </button>
           </div>
         )}
@@ -165,7 +165,7 @@ export default function ApproximationForm({
           border: `1px solid ${isPointsCountValid ? "#b7eb8f" : "#ffa39e"}`
         }}>
           Итого точек: <b>{pointsCount}</b> 
-          {!isPointsCountValid && " (нужно от 8 до 12 штук)"}
+          {!isPointsCountValid && (pointsCount < 8 ? " (нужно минимум 8 точек)" : " (максимум 150 точек)")}
         </div>
 
         <button 

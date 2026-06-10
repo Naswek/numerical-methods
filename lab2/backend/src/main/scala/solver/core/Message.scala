@@ -22,3 +22,4 @@ enum Message:
   
   case FunctionUndefined
   case InvalidInterval
+  case TooManyPoints

@@ -6,7 +6,7 @@ import solver.interpolation.core.DifferenceTable
 import solver.core.Message
 
 class NewtonFinite extends Interpolator {
-  override def name: String = "Ньютон (конечн. разности)"
+  override def name: String = "Ньютон (вторая формула)"
 
   override def solve(points: Seq[Point], targetX: Double): InterpolationResult = {
     val n = points.size

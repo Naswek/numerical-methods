@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import * as Desmos from "desmos";
+import Desmos from "desmos";
 
 function toLatex(f) {
   if (!f) return "";

@@ -6,7 +6,7 @@ import solver.interpolation.core.DifferenceTable
 import solver.core.Message
 
 class NewtonDivided extends Interpolator {
-  override def name: String = "Ньютон (раздел. разности)"
+  override def name: String = "Ньютон (первая формула)"
 
   override def solve(points: Seq[Point], targetX: Double): InterpolationResult = {
     val n = points.size

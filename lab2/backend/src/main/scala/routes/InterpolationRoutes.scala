@@ -46,7 +46,15 @@ object InterpolationRoutes {
                   hasUndefinedPoints(pack.f, request.a, request.b, request.h)
                 }
 
-                if (hasIntervalErrors) {
+                if (finalPoints.size > 150) {
+                  InterpolationResponse(
+                    success = false,
+                    results = Seq.empty,
+                    bestMethod = "",
+                    sourcePoints = Seq.empty,
+                    message = Message.TooManyPoints.toString
+                  )
+                } else if (hasIntervalErrors) {
                   InterpolationResponse(
                     success = false,
                     results = Seq.empty,

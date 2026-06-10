@@ -18,11 +18,7 @@ class Bessel extends Interpolator {
 
     val table = DifferenceTable.finite(points.map(_.y))
 
-    val idx = points.indexWhere(_.x > targetX)
-    var i0 = if (idx == -1) n - 2 else idx - 1
-    
-    if (i0 < 0) i0 = 0
-    if (i0 > n - 2) i0 = n - 2
+    val i0 = (n - 2) / 2
 
     val t = (targetX - points(i0).x) / h
     

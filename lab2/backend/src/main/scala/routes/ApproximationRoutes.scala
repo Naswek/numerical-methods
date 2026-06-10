@@ -31,30 +31,40 @@ object ApproximationRoutes {
             }
             val finalPoints = points.distinctBy(_.x).sortBy(_.x)
             
-            val response = Library.functions.get(request.functionId) match {
-              case Some(functionPack) =>
-                println(Library.functions.get(request.functionId).toString)    
-                val allResults = Library.approximationFunctions.values.map(solver => solver.solve(finalPoints)).toSeq
-                val successfulResults = allResults.filter(_.message == Message.Success)
-                val bestMethodName = if (successfulResults.nonEmpty) 
-                                       successfulResults.minBy(_.mse).methodName else "Нет подходящего метода"
-                
-                ApproximationResponse(
-                  success = true,
-                  results = allResults,
-                  bestMethod = bestMethodName,
-                  sourcePoints = points,
-                  message = Message.Success.toString
-                )
-      
-              case None =>
-                ApproximationResponse(
-                  success = false,
-                  results = Seq.empty,
-                  bestMethod = "",
-                  sourcePoints = Seq.empty,
-                  message = Message.BadId.toString 
-                )
+            val response = if (finalPoints.size > 150) {
+              ApproximationResponse(
+                success = false,
+                results = Seq.empty,
+                bestMethod = "",
+                sourcePoints = Seq.empty,
+                message = Message.TooManyPoints.toString
+              )
+            } else {
+              Library.functions.get(request.functionId) match {
+                case Some(functionPack) =>
+                  println(Library.functions.get(request.functionId).toString)    
+                  val allResults = Library.approximationFunctions.values.map(solver => solver.solve(finalPoints)).toSeq
+                  val successfulResults = allResults.filter(_.message == Message.Success)
+                  val bestMethodName = if (successfulResults.nonEmpty) 
+                                         successfulResults.minBy(_.mse).methodName else "Нет подходящего метода"
+                  
+                  ApproximationResponse(
+                    success = true,
+                    results = allResults,
+                    bestMethod = bestMethodName,
+                    sourcePoints = points,
+                    message = Message.Success.toString
+                  )
+        
+                case None =>
+                  ApproximationResponse(
+                    success = false,
+                    results = Seq.empty,
+                    bestMethod = "",
+                    sourcePoints = Seq.empty,
+                    message = Message.BadId.toString 
+                  )
+              }
             }
 
             complete(response)

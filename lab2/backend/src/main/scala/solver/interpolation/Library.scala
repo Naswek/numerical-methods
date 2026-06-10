@@ -1,7 +1,7 @@
 package solver.interpolation
 
 import solver.interpolation.functions.{InterpolationPack, Functions, Interpolator}
-import solver.interpolation.methods.{Lagrange, NewtonDivided, NewtonFinite, Gauss, Stirling, Bessel}
+import solver.interpolation.methods.{Lagrange, NewtonDivided, NewtonFinite, GaussFirst, GaussSecond, Stirling, Bessel}
 
 object Library {
     val functions: Map[Int, InterpolationPack] = Map(
@@ -26,8 +26,9 @@ object Library {
       0 -> new Lagrange,
       1 -> new NewtonDivided,
       2 -> new NewtonFinite,
-      3 -> new Gauss,
-      4 -> new Stirling,
-      5 -> new Bessel
+      3 -> new GaussFirst,
+      4 -> new GaussSecond,
+      5 -> new Stirling,
+      6 -> new Bessel
     )
 }

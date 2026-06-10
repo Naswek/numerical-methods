@@ -24,7 +24,7 @@ class Stirling extends Interpolator {
       return InterpolationResult(name, 0.0, Seq.empty, Message.BadParameters)
     }
 
-    val midIdx = points.zipWithIndex.minBy(p => math.abs(p._1.x - targetX))._2
+    val midIdx = (n - 1) / 2
     val t = (targetX - points(midIdx).x) / h
     val table = DifferenceTable.finite(points.map(_.y))
 

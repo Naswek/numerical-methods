@@ -15,6 +15,7 @@ export function translateMessage(msg) {
     "SingularMatrix" : "Определитель матрицы равен нулю",
     "FunctionUndefined": "Функция не определена на заданном интервале",
     "InvalidInterval": "Неверные параметры интервала (a должно быть <= b, h должно быть > 0)",
+    "TooManyPoints": "Превышено максимальное количество точек (150)",
   };
   return dictionary[msg] || msg;
 }

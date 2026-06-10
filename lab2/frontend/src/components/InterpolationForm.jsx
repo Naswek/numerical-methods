@@ -27,7 +27,7 @@ export default function InterpolationForm({
     ? (isAandBValid && isHValid ? Math.floor((numB - numA) / numH) + 1 : 0)
     : manualPoints.length;
 
-  const isPointsCountValid = pointsCount >= 2;
+  const isPointsCountValid = pointsCount >= 2 && pointsCount <= 150;
 
   const isManualDataValid = !isGenerate && manualPoints.every(p => isValidNum(p.x) && isValidNum(p.y));
 
@@ -173,7 +173,7 @@ export default function InterpolationForm({
           border: `1px solid ${isPointsCountValid ? "#b7eb8f" : "#ffa39e"}`
         }}>
           Итого точек: <b>{pointsCount}</b> 
-          {!isPointsCountValid && " (нужно минимум 2 точки)"}
+          {!isPointsCountValid && (pointsCount < 2 ? " (нужно минимум 2 точки)" : " (максимум 150 точек)")}
         </div>
 
         <button 
