@@ -107,7 +107,7 @@ export default function InterpolationResultPanel({ result, error }) {
                     )}
                   </td>
                   <td style={{ fontSize: "15px", fontWeight: "bold", color: isSuccess ? "#007bff" : "#ccc" }}>
-                    {isSuccess && res.value != null ? res.value.toFixed(6) : "—"}
+                    {isSuccess && res.value != null ? res.value : "—"}
                   </td>
                   <td style={{ color: isSuccess ? "green" : "red", fontSize: "13px" }}>
                     {res.message}

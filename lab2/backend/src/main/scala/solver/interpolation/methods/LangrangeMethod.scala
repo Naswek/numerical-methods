@@ -35,7 +35,8 @@ class Lagrange extends Interpolator {
       methodName = name,
       value = result,
       differenceTable = Seq(points.map(_.y)), 
-      message = Message.Success
+      message = Message.Success,
+      equation = InterpolationResult.getLagrangeEquation(points)
     )
   }
 }

@@ -7,7 +7,7 @@ import solver.core.Message
 
 class InterpolationSpec extends AnyFunSuite {
   test("Stirling method with points generated from a=0, b=0, h=0.2") {
-    val points = Seq(Point(0.0, 3.0)) // size 1
+    val points = Seq(Point(0.0, 3.0)) 
     val solver = new Stirling()
     val result = solver.solve(points, 1.0)
     assert(result.message == Message.NotEnoughPoints)
@@ -63,7 +63,7 @@ class InterpolationSpec extends AnyFunSuite {
     val undefinedRes = hasUndefinedPoints(f, -1.0, 1.0, 0.2)
     val definedRes = hasUndefinedPoints(f, 0.1, 1.1, 0.2)
     
-    assert(undefinedRes) // log(-1.0) is NaN, so should detect undefined
-    assert(!definedRes) // log(x) is defined for x in [0.1, 1.1]
+    assert(undefinedRes)
+    assert(!definedRes)
   }
 }

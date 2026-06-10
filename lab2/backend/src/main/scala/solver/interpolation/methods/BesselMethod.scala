@@ -18,7 +18,8 @@ class Bessel extends Interpolator {
 
     val table = DifferenceTable.finite(points.map(_.y))
 
-    var i0 = points.indexWhere(_.x > targetX) - 1
+    val idx = points.indexWhere(_.x > targetX)
+    var i0 = if (idx == -1) n - 2 else idx - 1
     
     if (i0 < 0) i0 = 0
     if (i0 > n - 2) i0 = n - 2
@@ -49,6 +50,6 @@ class Bessel extends Interpolator {
       tProd *= (t + k) * (t - k - 1)
     }
 
-    InterpolationResult(name, res, table, Message.Success)
+    InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
   }
 }

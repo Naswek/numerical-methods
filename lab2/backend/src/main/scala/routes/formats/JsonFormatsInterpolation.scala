@@ -20,7 +20,7 @@ object JsonFormatsInterpolation extends DefaultJsonProtocol {
     jsonFormat2(Point.apply)
 
   implicit val interpolationResultFormat: RootJsonFormat[InterpolationResult] = 
-    jsonFormat5(InterpolationResult.apply)
+    jsonFormat6(InterpolationResult.apply)
       
   implicit val interpolationRequestFormat: RootJsonFormat[InterpolationRequest] =
     jsonFormat8(InterpolationRequest.apply)

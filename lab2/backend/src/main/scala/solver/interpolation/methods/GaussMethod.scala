@@ -40,7 +40,7 @@ class Gauss extends Interpolator {
         factorial *= (2 * i)
         res += (tPart * table(midIdx - i)(2 * i)) / factorial
       }
-      InterpolationResult("Гаусс (вперед)", res, table, Message.Success)
+      InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
     } else {
       for (i <- 1 until math.min(midIdx + 1, n - midIdx)) {
         tPart *= (t + (i - 1))
@@ -51,7 +51,7 @@ class Gauss extends Interpolator {
         factorial *= (2 * i)
         res += (tPart * table(midIdx - i)(2 * i)) / factorial
       }
-      InterpolationResult("Гаусс (назад)", res, table, Message.Success)
+      InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
     }
   }
 }

@@ -95,7 +95,8 @@ export function adaptInterpolationResult(raw) {
       differenceTable: Array.isArray(res.differenceTable) ? res.differenceTable : [],
       message: translateMessage(res.message),
       isSuccess: res.message === "Success",
-      isExtrapolated: res.isExtrapolated ?? false
+      isExtrapolated: res.isExtrapolated ?? false,
+      equation: res.equation
     })) : []
   };
 }

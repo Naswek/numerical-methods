@@ -27,7 +27,7 @@ export default function InterpolationForm({
     ? (isAandBValid && isHValid ? Math.floor((numB - numA) / numH) + 1 : 0)
     : manualPoints.length;
 
-  const isPointsCountValid = pointsCount >= 2 && pointsCount <= 12;
+  const isPointsCountValid = pointsCount >= 2;
 
   const isManualDataValid = !isGenerate && manualPoints.every(p => isValidNum(p.x) && isValidNum(p.y));
 
@@ -67,9 +67,7 @@ export default function InterpolationForm({
   };
 
   const addPoint = () => {
-    if (manualPoints.length < 12) {
-      setManualPoints([...manualPoints, { x: "", y: "" }]);
-    }
+    setManualPoints([...manualPoints, { x: "", y: "" }]);
   };
 
   return (
@@ -148,10 +146,9 @@ export default function InterpolationForm({
             <button 
               type="button" 
               onClick={addPoint} 
-              disabled={manualPoints.length >= 12}
-              style={{ padding: "8px", borderRadius: "6px", cursor: manualPoints.length >= 12 ? "not-allowed" : "pointer", border: "1px dashed #007bff", color: "#007bff", backgroundColor: "transparent" }}
+              style={{ padding: "8px", borderRadius: "6px", cursor: "pointer", border: "1px dashed #007bff", color: "#007bff", backgroundColor: "transparent" }}
             >
-              + Добавить точку ({manualPoints.length}/12)
+              + Добавить точку ({manualPoints.length})
             </button>
           </div>
         )}
@@ -176,7 +173,7 @@ export default function InterpolationForm({
           border: `1px solid ${isPointsCountValid ? "#b7eb8f" : "#ffa39e"}`
         }}>
           Итого точек: <b>{pointsCount}</b> 
-          {!isPointsCountValid && " (нужно от 2 до 12 штук)"}
+          {!isPointsCountValid && " (нужно минимум 2 точки)"}
         </div>
 
         <button 
@@ -187,8 +184,6 @@ export default function InterpolationForm({
             fontWeight: "bold", 
             fontSize: "16px",
             cursor: isFormValid ? "pointer" : "not-allowed",
-            backgroundColor: isFormValid ? "#28a745" : "#e9ecef",
-            color: isFormValid ? "white" : "black",
             border: "none",
             borderRadius: "8px",
             transition: "0.2s"

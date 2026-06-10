@@ -98,6 +98,17 @@ export default function InterpolationGraph({ originalFormula, targetX, result })
             showLabel: i === 0 
           });
         }
+
+        if (res.isSuccess && res.equation) {
+          const isBest = res.methodName === result.bestMethod;
+          calc.setExpression({
+            id: `interp_func_${i}`,
+            latex: `y=${toLatex(res.equation)}`,
+            color: isBest ? Desmos.Colors.BLUE : "#B0B0B0",
+            lineWidth: isBest ? 3 : 1.5,
+            lineStyle: isBest ? Desmos.Styles.SOLID : Desmos.Styles.DASHED,
+          });
+        }
       });
     }
   }, [calc, originalFormula, targetX, result]); 

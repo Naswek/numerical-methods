@@ -43,6 +43,6 @@ class Stirling extends Interpolator {
       pProd *= (t * t - k * k)
     }
     
-    InterpolationResult(name, res, table, Message.Success)
+    InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
   }
 }

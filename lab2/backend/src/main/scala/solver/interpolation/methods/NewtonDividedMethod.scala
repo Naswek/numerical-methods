@@ -26,7 +26,8 @@ class NewtonDivided extends Interpolator {
       methodName = name,
       value = result,
       differenceTable = table,
-      message = Message.Success
+      message = Message.Success,
+      equation = InterpolationResult.getLagrangeEquation(points)
     )
   }
 }
