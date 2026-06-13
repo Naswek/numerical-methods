@@ -10,6 +10,7 @@ class Bessel extends Interpolator {
 
   override def solve(points: Seq[Point], targetX: Double): InterpolationResult = {
     val n = points.size
+        println("B")
     if (n < 2) return InterpolationResult(name, 0, Seq.empty, Message.NotEnoughPoints)
 
     val h = points(1).x - points(0).x
@@ -46,6 +47,6 @@ class Bessel extends Interpolator {
       tProd *= (t + k) * (t - k - 1)
     }
 
-    InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
+    InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getBesselEquation(points, table))
   }
 }

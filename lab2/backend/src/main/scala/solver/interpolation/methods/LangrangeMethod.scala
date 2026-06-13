@@ -9,7 +9,7 @@ class Lagrange extends Interpolator {
 
   override def solve(points: Seq[Point], targetX: Double): InterpolationResult = {
     val n = points.size
-    
+    println("Langrange")
     if (n < 2) {
       return InterpolationResult(name, 0, Seq.empty, Message.NotEnoughPoints)
     }

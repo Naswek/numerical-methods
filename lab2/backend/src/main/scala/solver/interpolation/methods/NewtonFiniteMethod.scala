@@ -39,7 +39,7 @@ class NewtonFinite extends Interpolator {
         factorial *= i
         res += (table(0)(i) * tPart) / factorial
       }
-      InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
+      InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getNewtonFiniteForwardEquation(points, table))
     } else {
       val t = (targetX - points.last.x) / h
       var res = table.last(0) 
@@ -51,7 +51,7 @@ class NewtonFinite extends Interpolator {
         factorial *= i
         res += (table(n - 1 - i)(i) * tPart) / factorial
       }
-      InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
+      InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getNewtonFiniteBackwardEquation(points, table))
     }
   }
 }

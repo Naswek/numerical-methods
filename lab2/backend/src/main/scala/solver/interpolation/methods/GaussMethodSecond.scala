@@ -39,6 +39,6 @@ class GaussSecond extends Interpolator {
       factorial *= (2 * k)
       res += (tPart * table(midIdx - k)(2 * k)) / factorial
     }
-    InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getLagrangeEquation(points))
+    InterpolationResult(name, res, table, Message.Success, equation = InterpolationResult.getGaussSecondEquation(points, table))
   }
 }
