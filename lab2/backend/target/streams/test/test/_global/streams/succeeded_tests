@@ -1,3 +1,5 @@
 #Successful Tests
-#Wed Jun 10 20:54:51 MSK 2026
-solver.interpolation.InterpolationSpec=1781114090960
+#Sat Jun 13 23:31:54 MSK 2026
+solver.approximation.Approximation=1781382577883
+solver.interpolation.InterpolationSpec=1781382714081
+solver.SolverRegressionSpec=1781382578268

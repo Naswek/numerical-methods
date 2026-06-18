@@ -3,6 +3,7 @@ import NonLinearPage from "./pages/NonLinearPage";
 import IntegralsPage from "./pages/IntegralsPage";
 import ApproximationPage from "./pages/ApproximationPage";
 import InterpolationPage from "./pages/InterpolationPage";
+import OdePage from "./pages/OdePage";
 import React from 'react';
 
 export default function App() {
@@ -24,12 +25,14 @@ export default function App() {
         <NavLink to="/integrals" style={linkStyle}>Лаб 3 (Интегралы)</NavLink>
         <NavLink to="/approximation" style={linkStyle}>Лаб 4 (Аппроксимации)</NavLink>
         <NavLink to="/interpolation" style={linkStyle}>Лаб 5 (Интерполяция)</NavLink>
+        <NavLink to="/ode" style={linkStyle}>Лаб 6 (ОДУ)</NavLink>
       </nav>
       <Routes>
         <Route path="/nonlinear" element={<NonLinearPage />} />
         <Route path="/integrals" element={<IntegralsPage />} />
         <Route path="/approximation" element={<ApproximationPage />} />
         <Route path="/interpolation" element={<InterpolationPage />} />
+        <Route path="/ode" element={<OdePage />} />
         <Route path="*" element={<Navigate to="/nonlinear" replace />} />
       </Routes>
     </BrowserRouter>

@@ -30,7 +30,8 @@ export function adaptSamples(raw) {
       system: Array.isArray(raw?.methods?.system) ? raw.methods.system : [],
       integrals: Array.isArray(raw?.methods) ? raw.methods : [],
       approximators: Array.isArray(raw?.methods) ? raw.methods : [],
-      interpolators: Array.isArray(raw?.methods) ? raw.methods : []
+      interpolators: Array.isArray(raw?.methods) ? raw.methods : [],
+      ode: Array.isArray(raw?.methods) ? raw.methods : []
     }
   };
 }
@@ -98,6 +99,22 @@ export function adaptInterpolationResult(raw) {
       isSuccess: res.message === "Success",
       isExtrapolated: res.isExtrapolated ?? false,
       equation: res.equation
+    })) : []
+  };
+}
+
+export function adaptOdeResult(raw) {
+  return {
+    success: raw?.success ?? false,
+    bestMethod: raw?.bestMethod ?? "",
+    globalMessage: translateMessage(raw?.message),
+    results: Array.isArray(raw?.results) ? raw.results.map(res => ({
+      methodName: res.methodName,
+      points: Array.isArray(res.points) ? res.points : [],
+      maxError: typeof res.maxError === "number" ? res.maxError : 0,
+      rungeError: typeof res.rungeError === "number" ? res.rungeError : 0,
+      message: translateMessage(res.message),
+      isSuccess: res.message === "Success"
     })) : []
   };
 }

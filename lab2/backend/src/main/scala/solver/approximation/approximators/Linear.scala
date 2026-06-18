@@ -9,6 +9,7 @@ class Linear extends Approximator {
   override def solve(points: Seq[Point]): ApproximationResult = {
     val n = points.size
     if (n < 2) return ApproximationResult(methodName = name, message = Message.NotEnoughPoints)
+    if (points.map(_.x).distinct.size < 2) return ApproximationResult(methodName = name, message = Message.SingularMatrix)
     
     val sumX = points.map(_.x).sum
     val sumY = points.map(_.y).sum

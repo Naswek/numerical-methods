@@ -6,34 +6,33 @@ import solver.interpolation.models.Point
 import solver.core.Message
 
 class InterpolationSpec extends AnyFunSuite {
-  test("Stirling method with points generated from a=0, b=0, h=0.2") {
+  test("Метод Стирлинга возвращает NotEnoughPoints для одного узла") {
     val points = Seq(Point(0.0, 3.0)) 
     val solver = new Stirling()
     val result = solver.solve(points, 1.0)
     assert(result.message == Message.NotEnoughPoints)
-    println(s"1 point case: value = ${result.value}, message = ${result.message}")
+    println(s"Случай с одной точкой: value = ${result.value}, message = ${result.message}")
   }
 
-  test("Stirling method with points from a=0, b=2, h=0.2, targetX = 1.0 (exact match)") {
-    // f(x) = 2x + 3. At 0.0 -> 3.0, 0.2 -> 3.4, ..., 1.0 -> 5.0, ..., 2.0 -> 7.0
+  test("Метод Стирлинга точно возвращает значение в существующем узле сетки") {
     val points = (0 to 10).map(i => Point(i * 0.2, 2.0 * (i * 0.2) + 3))
     val solver = new Stirling()
     val result = solver.solve(points, 1.0)
     assert(result.value == 5.0)
     assert(result.message == Message.Success)
-    println(s"Exact match (targetX = 1.0): value = ${result.value}, message = ${result.message}")
+    println(s"Точное попадание (targetX = 1.0): value = ${result.value}, message = ${result.message}")
   }
 
-  test("Stirling method with points from a=0, b=2, h=0.2, targetX = 1.1 (non-exact match)") {
+  test("Метод Стирлинга интерполирует значение между узлами сетки") {
     val points = (0 to 10).map(i => Point(i * 0.2, 2.0 * (i * 0.2) + 3))
     val solver = new Stirling()
     val result = solver.solve(points, 1.1)
     assert(result.value == 5.2)
     assert(result.message == Message.Success)
-    println(s"Non-exact match (targetX = 1.1): value = ${result.value}, message = ${result.message}")
+    println(s"Промежуточная точка (targetX = 1.1): value = ${result.value}, message = ${result.message}")
   }
 
-  test("Extrapolation detection logic check") {
+  test("Логика определения экстраполяции отличает внутренние и внешние точки") {
     val points = (0 to 5).map(i => Point(i.toDouble, i.toDouble * 2))
     
     val targetXInside = 2.5
@@ -49,7 +48,7 @@ class InterpolationSpec extends AnyFunSuite {
     assert(isExtrapolatedOutsideRight)
   }
 
-  test("Undefined points detection check (e.g. ln(x) on [-1, 1])") {
+  test("Логика определения неопределённых точек находит ln(x) на [-1, 1]") {
     val f: Double => Double = math.log
     
     def hasUndefinedPoints(func: Double => Double, a: Double, b: Double, h: Double): Boolean = {

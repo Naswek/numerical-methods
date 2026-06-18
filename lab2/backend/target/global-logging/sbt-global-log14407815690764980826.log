@@ -1,0 +1,33 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, Some(22af2d9a-5984-4e40-9b54-b5e1dcb7112c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInterpolationSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Stirling method with points generated from a=0, b=0, h=0.2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Stirling method with points from a=0, b=2, h=0.2, targetX = 1.0 (exact match)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Stirling method with points from a=0, b=2, h=0.2, targetX = 1.1 (non-exact match)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Extrapolation detection logic check[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Undefined points detection check (e.g. ln(x) on [-1, 1])[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mApproximation:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы никогда не должны выбрасывать исключения[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- MSE всегда неотрицательно[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Коэффициент детерминации R^2 не должен превышать 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Log и Grade должны корректно обрабатывать невалидные данные[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы должны возвращать ошибку, если данные вырожденные (все X одинаковы)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSolverRegressionSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы нелинейных уравнений находят простой корень и метод хорд отсекает интервал без корня[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Метод Ньютона для систем возвращает Success для уже сошедшейся и нормально сходящейся системы[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все методы интегрирования достаточно точно считают постоянную функцию[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы интегрирования сообщают о несобственном интеграле около особенности[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все методы интерполяции воспроизводят линейную функцию на равноотстоящей сетке[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Конечно-разностные методы интерполяции отклоняют неравномерную сетку[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все модели аппроксимации возвращают Success на подходящих корректных данных[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все методы ОДУ возвращают конечные успешные результаты при мягкой точности[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Списки samples соответствуют зарегистрированным backend-библиотекам[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 866 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 19[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 2 s, completed 13 июн. 2026 г., 23:29:38[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

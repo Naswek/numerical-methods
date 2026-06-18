@@ -10,6 +10,7 @@ class Logarithmic extends Approximator {
     if (points.exists(_.x <= 0)) return ApproximationResult(methodName = name, message = Message.InvalidDataForModel)
     val n = points.size
     if (n < 2) return ApproximationResult(methodName = name, message = Message.NotEnoughPoints)
+    if (points.map(_.x).distinct.size < 2) return ApproximationResult(methodName = name, message = Message.SingularMatrix)
     
     val transformed = points.map(p => Point(math.log(p.x), p.y))
     val sumX = transformed.map(_.x).sum

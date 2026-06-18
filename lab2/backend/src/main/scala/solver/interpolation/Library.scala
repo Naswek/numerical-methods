@@ -19,7 +19,12 @@ object Library {
       11 -> Functions.p12,
       12 -> Functions.p13,
       13 -> Functions.p14,
-      14 -> Functions.p15
+      14 -> Functions.p15,
+      15 -> Functions.p16,
+      16 -> Functions.p17,
+      17 -> Functions.p18,
+      18 -> Functions.p19,
+      19 -> Functions.p20
     )
 
     val interpolationFunctions: Map[Int, Interpolator] = Map(

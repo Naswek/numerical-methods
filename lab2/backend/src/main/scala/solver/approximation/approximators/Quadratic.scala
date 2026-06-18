@@ -13,6 +13,10 @@ class Quadratic extends Approximator {
       methodName = name, 
       message = Message.NotEnoughPoints
     )
+    if (points.map(_.x).distinct.size < 3) return ApproximationResult(
+      methodName = name,
+      message = Message.SingularMatrix
+    )
     
     val sx = points.map(_.x).sum
     val sx2 = points.map(p => math.pow(p.x, 2)).sum

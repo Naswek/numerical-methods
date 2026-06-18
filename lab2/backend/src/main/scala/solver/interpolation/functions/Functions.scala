@@ -63,4 +63,24 @@ object Functions {
   val p15: InterpolationPack = InterpolationPack(
     f = x => x * x * x - 6 * x * x + 4 * x + 12
   )
+
+  val p16: InterpolationPack = InterpolationPack(
+    f = x => sin(x) + 0.5 * x
+  )
+
+  val p17: InterpolationPack = InterpolationPack(
+    f = x => cos(x) + x * x / 5.0
+  )
+
+  val p18: InterpolationPack = InterpolationPack(
+    f = x => exp(-0.2 * x) + x
+  )
+
+  val p19: InterpolationPack = InterpolationPack(
+    f = x => 1.0 / (x + 2.0)
+  )
+
+  val p20: InterpolationPack = InterpolationPack(
+    f = x => sqrt(x + 1.0)
+  )
 }

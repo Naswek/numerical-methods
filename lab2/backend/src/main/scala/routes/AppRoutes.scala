@@ -16,6 +16,7 @@ println("app routes init")
               IntegralsRoutes.routes,
               ApproximationRoutes.routes,
               InterpolationRoutes.routes,
+              OdeRoutes.routes,
               path("test") {
                   get {
                       complete("Ит воркс!")

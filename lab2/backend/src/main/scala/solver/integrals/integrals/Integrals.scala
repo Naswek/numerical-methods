@@ -126,6 +126,22 @@ object Integrals {
   )
 
   val i31: IntegralsPack = IntegralsPack(
-  f = x => x*x*x
+    f = x => x*x*x
+  )
+
+  val i32: IntegralsPack = IntegralsPack(
+    f = x => sin(x)
+  )
+
+  val i33: IntegralsPack = IntegralsPack(
+    f = x => cos(x)
+  )
+
+  val i34: IntegralsPack = IntegralsPack(
+    f = x => exp(x)
+  )
+
+  val i35: IntegralsPack = IntegralsPack(
+    f = x => 1.0 / (1 + x*x)
   )
 }

@@ -1,32 +1,34 @@
-[debug] Running TaskDef(solver.interpolation.InterpolationSpec, org.scalatest.tools.Framework$$anon$1@74947529, false, [SuiteSelector])
-[debug] Running TaskDef(solver.approximation.Approximation, org.scalatest.tools.Framework$$anon$1@74947529, false, [SuiteSelector])
-[info] InterpolationSpec:
-[info] - Stirling method with points generated from a=0, b=0, h=0.2
-[info] - Stirling method with points from a=0, b=2, h=0.2, targetX = 1.0 (exact match)
-[info] - Stirling method with points from a=0, b=2, h=0.2, targetX = 1.1 (non-exact match)
-[info] - Extrapolation detection logic check
-[info] - Undefined points detection check (e.g. ln(x) on [-1, 1])
-[info] Approximation:
-[info] - Методы никогда не должны выбрасывать исключения
-[info] - MSE всегда неотрицательно
-[info] - Коэффициент детерминации R^2 не должен превышать 1
-[info] - Log и Grade должны корректно обрабатывать невалидные данные
-[info] - Методы должны возвращать ошибку, если данные вырожденные (все X одинаковы) *** FAILED ***
-[info]   GeneratorDrivenPropertyCheckFailedException was thrown during property evaluation.
-[info]    (Approximation.scala:74)
-[info]     Falsified after 5 successful property evaluations.
-[info]     Location: (Approximation.scala:74)
-[info]     Occurred when passed generated values (
-[info]       arg0 = List(Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0), Point(8.516050622038968, 1.0)) // 1 shrink
-[info]     )
-[info]   Init Seed: -3626821070675968475
-[info] Run completed in 329 milliseconds.
-[info] Total number of tests run: 10
-[info] Suites: completed 2, aborted 0
-[info] Tests: succeeded 9, failed 1, canceled 0, ignored 0, pending 0
-[info] *** 1 TEST FAILED ***
-[debug] Passed tests:
-[debug] 	solver.interpolation.InterpolationSpec
-[error] Failed tests:
-[error] 	solver.approximation.Approximation
-[error] (Test / test) sbt.TestsFailedException: Tests unsuccessful
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(solver.approximation.Approximation, org.scalatest.tools.Framework$$anon$1@73336f43, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(solver.SolverRegressionSpec, org.scalatest.tools.Framework$$anon$1@73336f43, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(solver.interpolation.InterpolationSpec, org.scalatest.tools.Framework$$anon$1@73336f43, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInterpolationSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Stirling method with points generated from a=0, b=0, h=0.2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Stirling method with points from a=0, b=2, h=0.2, targetX = 1.0 (exact match)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Stirling method with points from a=0, b=2, h=0.2, targetX = 1.1 (non-exact match)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Extrapolation detection logic check[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Undefined points detection check (e.g. ln(x) on [-1, 1])[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mApproximation:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы никогда не должны выбрасывать исключения[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- MSE всегда неотрицательно[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Коэффициент детерминации R^2 не должен превышать 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Log и Grade должны корректно обрабатывать невалидные данные[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы должны возвращать ошибку, если данные вырожденные (все X одинаковы)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSolverRegressionSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы нелинейных уравнений находят простой корень и метод хорд отсекает интервал без корня[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Метод Ньютона для систем возвращает Success для уже сошедшейся и нормально сходящейся системы[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все методы интегрирования достаточно точно считают постоянную функцию[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Методы интегрирования сообщают о несобственном интеграле около особенности[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все методы интерполяции воспроизводят линейную функцию на равноотстоящей сетке[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Конечно-разностные методы интерполяции отклоняют неравномерную сетку[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все модели аппроксимации возвращают Success на подходящих корректных данных[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Все методы ОДУ возвращают конечные успешные результаты при мягкой точности[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Списки samples соответствуют зарегистрированным backend-библиотекам[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 866 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 19[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	solver.approximation.Approximation[0m
+[0m[[0m[0mdebug[0m] [0m[0m	solver.interpolation.InterpolationSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	solver.SolverRegressionSpec[0m

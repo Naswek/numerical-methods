@@ -16,7 +16,12 @@ val functions = List(
   "1/(1+x^2)",            
   "sqrt(x)",              
   "abs(x)",               
-  "x^3 - 6*x^2 + 4*x + 12"
+  "x^3 - 6*x^2 + 4*x + 12",
+  "sin(x) + 0.5*x",
+  "cos(x) + x^2/5",
+  "exp(-0.2*x) + x",
+  "1/(x + 2)",
+  "sqrt(x + 1)"
 )
 
   val approximators = List (

@@ -1,4 +1,4 @@
-import { translateMessage, adaptSamples, adaptFunctionResult, adaptSystemResult, adaptIntegralResult, adaptApproximationResult, adaptInterpolationResult } from "./adapter";
+import { translateMessage, adaptSamples, adaptFunctionResult, adaptSystemResult, adaptIntegralResult, adaptApproximationResult, adaptInterpolationResult, adaptOdeResult } from "./adapter";
 
 const BASE_URL = "http://localhost:8080/api/v1"; 
 
@@ -65,4 +65,13 @@ export async function solveInterpolation(payload) {
     body: JSON.stringify(payload)
   });
   return adaptInterpolationResult(unwrapResponse(await readJson(res)));
+}
+
+export async function solveOde(payload) {
+  const res = await fetch(`${BASE_URL}/ode/function`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  return adaptOdeResult(unwrapResponse(await readJson(res)));
 }

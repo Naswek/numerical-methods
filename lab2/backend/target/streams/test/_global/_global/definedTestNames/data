@@ -1,1 +1,1 @@
-["solver.approximation.Approximation","solver.interpolation.InterpolationSpec"]
+["solver.approximation.Approximation","solver.SolverRegressionSpec","solver.interpolation.InterpolationSpec"]

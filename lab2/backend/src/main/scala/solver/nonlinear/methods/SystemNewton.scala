@@ -42,7 +42,7 @@ class SystemNewton extends SystemMethod {
       fx = system.f(x)
 
       if (norm(fx) < eps)
-        return new SystemResult(x, fx, iterations, Message.BadParameters)
+        return new SystemResult(x, fx, iterations, Message.Success)
 
       val J = numericalJacobian(system.f, x)
       val dx = solveLinear(J, fx.map(-_))

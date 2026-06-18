@@ -64,4 +64,24 @@ object Functions {
   val p15: FunctionPack = FunctionPack(
     f = x => x * x * x - 6 * x * x + 4 * x + 12
   )
+
+  val p16: FunctionPack = FunctionPack(
+    f = x => sin(x) + 0.5 * x
+  )
+
+  val p17: FunctionPack = FunctionPack(
+    f = x => cos(x) + x * x / 5.0
+  )
+
+  val p18: FunctionPack = FunctionPack(
+    f = x => exp(-0.2 * x) + x
+  )
+
+  val p19: FunctionPack = FunctionPack(
+    f = x => 1.0 / (x + 2.0)
+  )
+
+  val p20: FunctionPack = FunctionPack(
+    f = x => sqrt(x + 1.0)
+  )
 }

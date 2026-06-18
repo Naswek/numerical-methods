@@ -12,6 +12,7 @@ class Grade extends Approximator {
     val n = validPoints.size
   
     if (n < 2) return ApproximationResult(methodName = name, message = Message.NotEnoughPoints)
+    if (validPoints.map(_.x).distinct.size < 2) return ApproximationResult(methodName = name, message = Message.SingularMatrix)
     
     val transformedPoints = validPoints.map(p => Point(math.log(p.x), math.log(p.y)))
     

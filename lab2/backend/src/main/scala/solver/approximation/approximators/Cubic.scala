@@ -9,6 +9,7 @@ class Cubic extends Approximator {
   override def solve(points: Seq[Point]): ApproximationResult = {
     val n = points.size.toDouble
     if (n < 4) return ApproximationResult(methodName = name, message = Message.NotEnoughPoints)
+    if (points.map(_.x).distinct.size < 4) return ApproximationResult(methodName = name, message = Message.SingularMatrix)
     
     val sx = (1 to 6).map(p => points.map(pt => math.pow(pt.x, p)).sum)
     val sy  = points.map(_.y).sum
