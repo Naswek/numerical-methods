@@ -1,4 +1,4 @@
-import { translateMessage, adaptSamples, adaptFunctionResult, adaptSystemResult, adaptIntegralResult, adaptApproximationResult, adaptInterpolationResult, adaptOdeResult } from "./adapter";
+import { translateMessage, adaptSamples, adaptFunctionResult, adaptSystemResult, adaptIntegralResult, adaptApproximationResult, adaptInterpolationResult, adaptOdeResult, adaptMatrixResult } from "./adapter";
 
 const BASE_URL = "http://localhost:8080/api/v1"; 
 
@@ -74,4 +74,13 @@ export async function solveOde(payload) {
     body: JSON.stringify(payload)
   });
   return adaptOdeResult(unwrapResponse(await readJson(res)));
+}
+
+export async function solveMatrix(payload) {
+  const res = await fetch(`${BASE_URL}/matrix/function`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  return adaptMatrixResult(await readJson(res));
 }

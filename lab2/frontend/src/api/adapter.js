@@ -31,7 +31,8 @@ export function adaptSamples(raw) {
       integrals: Array.isArray(raw?.methods) ? raw.methods : [],
       approximators: Array.isArray(raw?.methods) ? raw.methods : [],
       interpolators: Array.isArray(raw?.methods) ? raw.methods : [],
-      ode: Array.isArray(raw?.methods) ? raw.methods : []
+      ode: Array.isArray(raw?.methods) ? raw.methods : [],
+      matrix: Array.isArray(raw?.methods) ? raw.methods : []
     }
   };
 }
@@ -116,5 +117,22 @@ export function adaptOdeResult(raw) {
       message: translateMessage(res.message),
       isSuccess: res.message === "Success"
     })) : []
+  };
+}
+
+export function adaptMatrixResult(raw) {
+  return {
+    success: raw?.success ?? false,
+    solution: Array.isArray(raw?.solution) ? raw.solution : [],
+    iterations: raw?.iterations ?? 0,
+    epsilon: raw?.epsilon ?? 0,
+    maxError: raw?.maxError ?? 0,
+    errors: Array.isArray(raw?.errors) ? raw.errors : [],
+    c: Array.isArray(raw?.c) ? raw.c : [],
+    d: Array.isArray(raw?.d) ? raw.d : [],
+    reorderedMatrix: Array.isArray(raw?.reorderedMatrix) ? raw.reorderedMatrix : [],
+    formulas: Array.isArray(raw?.formulas) ? raw.formulas : [],
+    message: translateMessage(raw?.message),
+    isError: raw?.success === false
   };
 }
