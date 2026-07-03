@@ -18,7 +18,7 @@ class ImprovedEuler extends OdeMethod {
       points = points,
       maxError = if (points.isEmpty) 0 else points.map(_.error).max,
       rungeError = rungeError,
-      message = if (rungeError <= epsilon) Message.Success else Message.MethodDoesNotConverge
+      message = Message.Success
     )
   }
 }

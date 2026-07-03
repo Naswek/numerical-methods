@@ -1,5 +1,61 @@
-[error] -- [E040] Syntax Error: /home/naswek/scala_projects/lab2/backend/src/main/scala/solver/interpolation/models/InterpolationResult.scala:371:0 
-[error] 371 |
-[error]     |^
-[error]     |'}' expected, but eof found
-[error] one error found
+[0m[[0m[31merror[0m] [0m[0merror while loading ElementType,[0m
+[0m[[0m[31merror[0m] [0m[0mclass file /modules/java.base/java/lang/annotation/ElementType.class is broken, reading aborted with class java.lang.RuntimeException[0m
+[0m[[0m[31merror[0m] [0m[0mbad constant pool index: 0 at pos: 1220[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsApproximation.scala:21:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m21 |[0m    jsonFormat2(Point)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.approximation.functions.Point.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsApproximation.scala:24:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m24 |[0m    jsonFormat7(ApproximationResult)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.approximation.functions.ApproximationResult.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsApproximation.scala:27:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m27 |[0m    jsonFormat7(ApproximationRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.approximation.models.ApproximationRequest.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsApproximation.scala:30:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m30 |[0m    jsonFormat5(ApproximationResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.approximation.models.ApproximationResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsApproximation.scala:33:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m33 |[0m    jsonFormat2(SampleResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.approximation.models.SampleResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsIntegrals.scala:11:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m11 |[0m    jsonFormat5(IntegralRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.integrals.models.IntegralRequest.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsIntegrals.scala:14:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m14 |[0m    jsonFormat4(IntegralResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.integrals.models.IntegralResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsIntegrals.scala:17:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m17 |[0m    jsonFormat2(SamplesResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.integrals.models.SamplesResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:11:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m11 |[0m    jsonFormat5(FunctionRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.FunctionRequest.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:14:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m14 |[0m    jsonFormat5(FunctionResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.FunctionResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:17:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m17 |[0m    jsonFormat4(SystemRequest)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.SystemRequest.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:20:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m20 |[0m    jsonFormat5(SystemResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.SystemResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:23:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m23 |[0m    jsonFormat2(MethodsResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.MethodsResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /mnt/home/naswek/scala_projects/lab2/backend/src/main/scala/routes/formats/JsonFormatsNonLinear.scala:26:16 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m26 |[0m    jsonFormat3(SamplesResponse)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0mThe method `apply` is inserted. The auto insertion will be deprecated, please write `solver.nonlinear.models.SamplesResponse.apply` explicitly.[0m
+[0m[[0m[33mwarn[0m] [0m[0m14 warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

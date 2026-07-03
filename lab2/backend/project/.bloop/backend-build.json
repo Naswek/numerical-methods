@@ -2,15 +2,15 @@
     "version": "1.4.0",
     "project": {
         "name": "backend-build",
-        "directory": "/home/naswek/scala_projects/lab2/backend/project",
-        "workspaceDir": "/home/naswek/scala_projects/lab2/backend/project",
+        "directory": "/mnt/home/naswek/scala_projects/lab2/backend/project",
+        "workspaceDir": "/mnt/home/naswek/scala_projects/lab2/backend/project",
         "sources": [
-            "/home/naswek/scala_projects/lab2/backend/project/src/main/scala",
-            "/home/naswek/scala_projects/lab2/backend/project/src/main/scala-2.12",
-            "/home/naswek/scala_projects/lab2/backend/project/src/main/scala-2",
-            "/home/naswek/scala_projects/lab2/backend/project/src/main/java",
-            "/home/naswek/scala_projects/lab2/backend/project/src/main/scala-sbt-1.0",
-            "/home/naswek/scala_projects/lab2/backend/project/target/scala-2.12/sbt-1.0/src_managed/main"
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/src/main/scala",
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/src/main/scala-2.12",
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/src/main/scala-2",
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/src/main/java",
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/src/main/scala-sbt-1.0",
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/target/scala-2.12/sbt-1.0/src_managed/main"
         ],
         "dependencies": [
             
@@ -111,11 +111,11 @@
             "/home/naswek/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.12.0/jna-platform-5.12.0.jar",
             "/home/naswek/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar"
         ],
-        "out": "/home/naswek/scala_projects/lab2/backend/project/.bloop/backend-build",
-        "classesDir": "/home/naswek/scala_projects/lab2/backend/project/.bloop/backend-build/scala-2.12/sbt-1.0/classes",
+        "out": "/mnt/home/naswek/scala_projects/lab2/backend/project/.bloop/backend-build",
+        "classesDir": "/mnt/home/naswek/scala_projects/lab2/backend/project/.bloop/backend-build/scala-2.12/sbt-1.0/classes",
         "resources": [
-            "/home/naswek/scala_projects/lab2/backend/project/src/main/resources",
-            "/home/naswek/scala_projects/lab2/backend/project/target/scala-2.12/sbt-1.0/resource_managed/main"
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/src/main/resources",
+            "/mnt/home/naswek/scala_projects/lab2/backend/project/target/scala-2.12/sbt-1.0/resource_managed/main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -129,9 +129,9 @@
             ],
             "jars": [
                 "/home/naswek/.sbt/boot/scala-2.12.21/lib/scala-library.jar",
-                "/home/naswek/.sbt/boot/scala-2.12.21/lib/scala-compiler.jar",
+                "/home/naswek/.sbt/boot/scala-2.12.21/lib/scala-xml_2.12-2.3.0.jar",
                 "/home/naswek/.sbt/boot/scala-2.12.21/lib/scala-reflect.jar",
-                "/home/naswek/.sbt/boot/scala-2.12.21/lib/scala-xml_2.12-2.3.0.jar"
+                "/home/naswek/.sbt/boot/scala-2.12.21/lib/scala-compiler.jar"
             ],
             "setup": {
                 "order": "mixed",
@@ -220,22 +220,22 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/usr/lib/jvm/java-17-openjdk",
+                "home": "/usr/lib/jvm/java-21-openjdk-amd64",
                 "options": [
-                    "-Duser.dir=/home/naswek/scala_projects/lab2/backend/project"
+                    "-Duser.dir=/mnt/home/naswek/scala_projects/lab2/backend/project"
                 ]
             },
             "mainClass": [
                 
             ],
             "runtimeConfig": {
-                "home": "/usr/lib/jvm/java-17-openjdk",
+                "home": "/usr/lib/jvm/java-21-openjdk-amd64",
                 "options": [
-                    "-Duser.dir=/home/naswek/scala_projects/lab2/backend/project"
+                    "-Duser.dir=/mnt/home/naswek/scala_projects/lab2/backend/project"
                 ]
             },
             "classpath": [
-                "/home/naswek/scala_projects/lab2/backend/project/.bloop/backend-build/scala-2.12/sbt-1.0/classes",
+                "/mnt/home/naswek/scala_projects/lab2/backend/project/.bloop/backend-build/scala-2.12/sbt-1.0/classes",
                 "/home/naswek/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/2.0.19/sbt-bloop_2.12_1.0-2.0.19.jar",
                 "/home/naswek/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sbt-assembly_2.12_1.0/2.2.0/sbt-assembly_2.12_1.0-2.2.0.jar",
                 "/home/naswek/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar",

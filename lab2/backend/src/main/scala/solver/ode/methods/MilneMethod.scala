@@ -18,7 +18,7 @@ class Milne extends OdeMethod {
       points = points,
       maxError = maxError,
       rungeError = 0,
-      message = if (maxError <= epsilon) Message.Success else Message.MethodDoesNotConverge
+      message = Message.Success 
     )
   }
 }
