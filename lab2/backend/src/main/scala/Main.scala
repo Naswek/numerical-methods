@@ -9,6 +9,8 @@ import akka.http.scaladsl.server.ExceptionHandler
 import ch.megard.akka.http.cors.scaladsl.CorsDirectives._
 import ch.megard.akka.http.cors.scaladsl.settings.CorsSettings
 import akka.actor.typed.scaladsl.adapter._
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
 
 object Main extends App {
   implicit val system: ActorSystem[Nothing] =
@@ -29,9 +31,13 @@ object Main extends App {
       }
     }
 
-  Http()(system.classicSystem)
+  Await.result(
+    Http()(system.classicSystem)
     .newServerAt("0.0.0.0", 8080)
-    .bind(routesWithLogging)
+    .bind(routesWithLogging),
+    Duration.Inf
+  )
 
   println("Server running at http://localhost:8080/")
+  Await.result(system.whenTerminated, Duration.Inf)
 }

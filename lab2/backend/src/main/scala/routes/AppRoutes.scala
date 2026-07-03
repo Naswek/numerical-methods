@@ -12,6 +12,7 @@ object AppRoutes {
 println("app routes init")    
   val routes: Route = pathPrefix("api" / "v1") {
           concat(
+              MatrixRoutes.routes,
               NonLinearRoutes.routes,
               IntegralsRoutes.routes,
               ApproximationRoutes.routes,

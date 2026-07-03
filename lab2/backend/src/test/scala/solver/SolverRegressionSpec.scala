@@ -117,7 +117,23 @@ class SolverRegressionSpec extends AnyFunSuite {
     }
   }
 
+  test("Метод Якоби для СЛАУ переставляет строки и сходится к решению") {
+    val matrix = Array(
+      Array(1.0, 4.0, 6.0),
+      Array(3.0, 1.0, 7.0)
+    )
+
+    val result = solver.matrix.Library.matrixMethods(0).solve(matrix, 1e-6, Array(0.0, 0.0), 1000)
+
+    assert(result.message == Message.Success)
+    assert(math.abs(result.solution(0) - 2.0) <= 1e-4)
+    assert(math.abs(result.solution(1) - 1.0) <= 1e-4)
+    assert(result.iterations > 0)
+  }
+
   test("Списки samples соответствуют зарегистрированным backend-библиотекам") {
+    assert(solver.matrix.samples.Samples.methods.size == solver.matrix.Library.matrixMethods.size)
+
     assert(solver.integrals.samples.Samples.integrals.size == solver.integrals.Library.integralsPack.size)
     assert(solver.integrals.samples.Samples.integralsMethods.size == solver.integrals.Library.integralsMethods.size)
 
